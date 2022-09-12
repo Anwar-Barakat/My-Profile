@@ -89,3 +89,14 @@ document.querySelector(".pp-close").onclick = togglePortfolioPopup;
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("pp-inner")) togglePortfolioPopup();
 });
+
+const navigation = document.querySelector(".nav__menu");
+const list = navigation.querySelectorAll(".nav__list");
+
+list.forEach((li) => {
+    li.onclick = (event) => {
+        event.preventDefault();
+        list.forEach((el) => el.classList.remove("active"));
+        li.classList.add("active");
+    };
+});
