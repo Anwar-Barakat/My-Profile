@@ -1,62 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Portfolio</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Personal Portfolio</title>
 
-    <!-- fontawesome cdn  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- main start -->
-    <div class="main">
-      <!-- home start -->
-      <section class="home-section align-items-center">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="home-text">
-              <p>Hello, Buddy</p>
-              <h1>Anwar Barakat</h1>
-              <h2>full stack & laravel web developer</h2>
-              <div class="btns">
-                <a href="#about" class="custom-btn"> About me </a>
-                <a href="#about" class="custom-btn"> Latest works </a>
-              </div>
-            </div>
-            <div class="home-image">
-              <div class="image-box">
-                <img src="assets/images/header.png" alt="" />
-              </div>
-            </div>
-          </div>
+        <!-- fontawesome cdn  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <!-- custom css -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+
+    <body>
+        <!-- main start -->
+        <div class="main">
+            <!-- home start -->
+            <section class="home-section align-items-center hidden">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="home-text">
+                            <p>Hello, Buddy</p>
+                            <h1>Anwar Barakat</h1>
+                            <h2>full stack & laravel web developer</h2>
+                            <div class="btns">
+                                <a href="#about" class="custom-btn">
+                                    About me
+                                </a>
+                                <a href="#about" class="custom-btn">
+                                    Latest works
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-image">
+                            <div class="image-box">
+                                <img src="assets/images/header.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- home end -->
+
+            <section class="about-section section-padding">
+                <div class="row">
+                    <div class="section-title">
+                        <div class="box-light">
+                            <div class="lightbar"></div>
+                            <div class="topLayer"></div>
+                            <h2 data-heading="main info">about me</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="about-image">
+                            <div class="image-box">
+                                <img src="assets/images/header.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Placeat porro dolores cum
+                                eaque labore minus nam debitis omnis odit rerum
+                                beatae, veniam numquam voluptas, non enim maxime
+                                repudiandae voluptatibus deleniti.
+                            </p>
+                            <h3>skills</h3>
+                            <div class="skills">
+                                <div class="group">
+                                    <div class="skill-item">HTML</div>
+                                    <div class="skill-item">CSS</div>
+                                    <div class="skill-item">JS</div>
+                                </div>
+                                <div class="group">
+                                    <div class="skill-item">Bootstrap</div>
+                                    <div class="skill-item">Tailwind</div>
+                                    <div class="skill-item">VueJS</div>
+                                </div>
+                                <div class="group">
+                                    <div class="skill-item">PHP</div>
+                                    <div class="skill-item">MySQL</div>
+                                    <div class="skill-item">Laravel</div>
+                                </div>
+                            </div>
+
+                            <div class="about-tabs">
+                                <button
+                                    type="button"
+                                    class="tab-item active"
+                                    data-target="#education"
+                                >
+                                    education
+                                </button>
+                                <button
+                                    type="button"
+                                    class="tab-item"
+                                    data-target="#experience"
+                                >
+                                    experience
+                                </button>
+                            </div>
+
+                            <!-- education start -->
+                            <div class="tab-content active" id="education">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="date">2016 - 2021</span>
+                                        <h4>
+                                            bachelor of computer enginnering -
+                                            <span>damasucs university</span>
+                                        </h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quia,
+                                            nisi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- education end -->
+
+                            <!-- experience start -->
+                            <div class="tab-content" id="experience">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="date">2020 - 2022</span>
+                                        <h4>
+                                            web developer
+                                            <span></span>
+                                        </h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quia,
+                                            nisi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- experience end -->
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-      <!-- home end -->
-    </div>
-    <div class="nav__color">
-      <ul class="colors">
-        <li data-color="142" class="change-color"></li>
-        <li data-color="210" class="change-color"></li>
-        <li data-color="280" class="change-color"></li>
-        <li data-color="340" class="change-color"></li>
-      </ul>
-      <a href="javascript:void(0);" class="nav__color-icon">
-        <i class="fas fa-cog fa-spin"></i>
-      </a>
-    </div>
-    <!-- main end -->
+        <div class="nav__color">
+            <ul class="colors">
+                <li data-color="142" class="change-color"></li>
+                <li data-color="210" class="change-color"></li>
+                <li data-color="280" class="change-color"></li>
+                <li data-color="340" class="change-color"></li>
+            </ul>
+            <a href="javascript:void(0);" class="nav__color-icon">
+                <i class="fas fa-cog fa-spin"></i>
+            </a>
+        </div>
+        <!-- main end -->
 
-    <!-- fontawesome cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+        <!-- fontawesome cdn  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-    <!-- custom js -->
-    <script src="assets/js/main.js"></script>
-  </body>
+        <!-- custom js -->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
