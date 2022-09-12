@@ -16,6 +16,17 @@
     </head>
 
     <body>
+        <div class="nav__color">
+            <ul class="colors">
+                <li data-color="142" class="change-color"></li>
+                <li data-color="210" class="change-color"></li>
+                <li data-color="280" class="change-color"></li>
+                <li data-color="340" class="change-color"></li>
+            </ul>
+            <a href="javascript:void(0);" class="nav__color-icon">
+                <i class="fas fa-cog fa-spin"></i>
+            </a>
+        </div>
         <!-- main start -->
         <div class="main">
             <!-- home start -->
@@ -45,7 +56,8 @@
             </section>
             <!-- home end -->
 
-            <section class="about-section section-padding">
+            <!-- about start -->
+            <section class="about-section sec-padding hidden">
                 <div class="row">
                     <div class="section-title">
                         <div class="box-light">
@@ -156,19 +168,101 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="nav__color">
-            <ul class="colors">
-                <li data-color="142" class="change-color"></li>
-                <li data-color="210" class="change-color"></li>
-                <li data-color="280" class="change-color"></li>
-                <li data-color="340" class="change-color"></li>
-            </ul>
-            <a href="javascript:void(0);" class="nav__color-icon">
-                <i class="fas fa-cog fa-spin"></i>
-            </a>
+            <!-- about end -->
+
+            <!-- portfolio start -->
+            <section class="portfolio-section sec-padding">
+                <div class="row">
+                    <div class="section-title">
+                        <div class="box-light">
+                            <div class="lightbar"></div>
+                            <div class="topLayer"></div>
+                            <h2 data-heading="recent works">Portfolio</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="portfolio-items">
+                        <div class="portfolio-item">
+                            <div class="portfolio-item-thumbnail">
+                                <img
+                                    src="assets/images/portfolio/mobile_template_2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <h3 class="portfolio-item-title">
+                                Mobile Template
+                            </h3>
+                            <a
+                                href="javascript:void(0);"
+                                class="custom-btn view-peoject"
+                            >
+                                demo
+                            </a>
+                            <div class="portfolio-item-details">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Itaque voluptatem eos
+                                    accusantium nobis iste pariatur! Nesciunt
+                                    rerum voluptate corporis illo.
+                                </div>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>
+                                            created - <span>4 dec 2020</span>
+                                        </li>
+                                        <li>
+                                            technologies used -
+                                            <span>html, scss, bootstrap</span>
+                                        </li>
+                                        <li>Role - <span>FrontEnd</span></li>
+                                        <li>
+                                            view online -
+                                            <span
+                                                ><a
+                                                    href="www.domain.com"
+                                                    target="_blank"
+                                                    >www.domain.com</a
+                                                ></span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- portfolio end -->
         </div>
         <!-- main end -->
+
+        <!-- portfolio popup start -->
+        <div class="portfolio-popup">
+            <div class="pp-inner">
+                <div class="pp-content">
+                    <div class="pp-header">
+                        <a
+                            href="javascript:void(0)"
+                            class="custom-btn pp-close"
+                        >
+                            <i class="fas fa-times"></i>
+                        </a>
+                        <div class="pp-thumbnail">
+                            <img src="" alt="" />
+                        </div>
+                        <h3></h3>
+                    </div>
+                    <div class="pp-body">
+                        <div class="portfolio-item-details">
+                            <div class="description"></div>
+                            <div class="general-info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio popup end -->
 
         <!-- fontawesome cdn  -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
