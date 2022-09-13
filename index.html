@@ -16,6 +16,21 @@
     </head>
 
     <body>
+        <!-- overlay start -->
+        <div class="overlay-effect">
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+            <div class="overlay-effect-item"></div>
+        </div>
+        <!-- overlay start -->
+
         <div class="nav__color">
             <ul class="colors">
                 <li data-color="142" class="change-color"></li>
@@ -29,8 +44,60 @@
         </div>
         <!-- main start -->
         <div class="main">
+            <!-- header start -->
+            <header class="header">
+                <div class="container">
+                    <div class="row space-between zIndex">
+                        <a href="">logo</a>
+                        <a href="#" class="nav-toggle">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <nav class="nav">
+                            <div class="nav-inner">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="#home"
+                                            class="nav-link nav-item"
+                                            >Home</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#about"
+                                            class="nav-link nav-item"
+                                            >About Me</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#portfolio"
+                                            class="nav-link nav-item"
+                                            >Portfolio</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#contact"
+                                            class="nav-link nav-item"
+                                            >Contact Me</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+
             <!-- home start -->
-            <section class="home-section align-items-center hidden">
+            <section
+                class="home-section section align-items-center active"
+                id="home"
+            >
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="home-text">
@@ -38,10 +105,13 @@
                             <h1>Anwar Barakat</h1>
                             <h2>full stack & laravel web developer</h2>
                             <div class="btns">
-                                <a href="#about" class="custom-btn">
+                                <a href="#about" class="custom-btn nav-link">
                                     About me
                                 </a>
-                                <a href="#about" class="custom-btn">
+                                <a
+                                    href="#portfolio"
+                                    class="custom-btn nav-link"
+                                >
                                     Latest works
                                 </a>
                             </div>
@@ -57,7 +127,7 @@
             <!-- home end -->
 
             <!-- about start -->
-            <section class="about-section sec-padding hidden">
+            <section class="about-section section sec-padding" id="about">
                 <div class="row">
                     <div class="section-title">
                         <div class="box-light">
@@ -160,7 +230,7 @@
                                 <a href="#" class="custom-btn">
                                     download resume
                                 </a>
-                                <a href="#about" class="custom-btn">
+                                <a href="#contact" class="custom-btn nav-link">
                                     contact me
                                 </a>
                             </div>
@@ -171,7 +241,10 @@
             <!-- about end -->
 
             <!-- portfolio start -->
-            <section class="portfolio-section sec-padding hidden">
+            <section
+                class="portfolio-section section sec-padding"
+                id="portfolio"
+            >
                 <div class="row">
                     <div class="section-title">
                         <div class="box-light">
@@ -235,8 +308,8 @@
             </section>
             <!-- portfolio end -->
 
-            <!-- portfolio start -->
-            <section class="contact-section sec-padding">
+            <!-- contact start -->
+            <section class="contact-section section sec-padding" id="contact">
                 <div class="row">
                     <div class="section-title">
                         <div class="box-light">
@@ -317,7 +390,7 @@
                     </div>
                 </div>
             </section>
-            <!-- portfolio end -->
+            <!-- contact end -->
         </div>
         <!-- main end -->
 
@@ -351,13 +424,13 @@
         <div class="nav__menu">
             <ul>
                 <li class="nav__list">
-                    <a href="#" class="nav__link">
+                    <a href="#home" class="nav__link nav-link nav-item">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="text">Home</span>
                     </a>
                 </li>
                 <li class="nav__list active">
-                    <a href="#" class="nav__link">
+                    <a href="#about" class="nav__link nav-link nav-item">
                         <span class="icon"
                             ><i class="fas fa-address-card"></i
                         ></span>
@@ -366,7 +439,7 @@
                 </li>
 
                 <li class="nav__list">
-                    <a href="#" class="nav__link">
+                    <a href="#portfolio" class="nav__link nav-link nav-item">
                         <span class="icon">
                             <i class="fas fa-camera-retro"></i>
                         </span>
@@ -374,15 +447,7 @@
                     </a>
                 </li>
                 <li class="nav__list">
-                    <a href="#" class="nav__link">
-                        <span class="icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </span>
-                        <span class="text">Skills</span>
-                    </a>
-                </li>
-                <li class="nav__list">
-                    <a href="#" class="nav__link">
+                    <a href="#contact" class="nav__link nav-link nav-item">
                         <span class="icon">
                             <i class="fas fa-envelope"></i>
                         </span>

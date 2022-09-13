@@ -1,5 +1,56 @@
 // ! ===========================
-// !Change Website Color
+// ! Toggle Navbar
+// ! ===========================
+const navToggle = document.querySelector(".nav-toggle");
+navToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideSection();
+    toggleNavbar();
+    document.body.classList.toggle("hide-scrolling");
+});
+
+function hideSection() {
+    document.querySelector("section.active").classList.toggle("fade-out");
+}
+
+function toggleNavbar() {
+    document.querySelector("header.header").classList.toggle("active");
+}
+
+// ! ===========================
+// ! Active Section
+// ! ===========================
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("nav-link") && e.target.hash != "") {
+        document.querySelector(".overlay-effect").classList.add("active");
+        if (e.target.classList.contains("nav-item")) {
+            toggleNavbar();
+        } else {
+            hideSection();
+            window.scrollTo(0, 0);
+            document.body.classList.add("hide-scrolling");
+        }
+        setTimeout(() => {
+            document
+                .querySelector("section.active")
+                .classList.remove("active", "fade-out");
+            document.querySelector(e.target.hash).classList.add("active");
+            window.scrollTo(0, 0);
+            document.body.classList.remove("hide-scrolling");
+            document
+                .querySelector(".overlay-effect")
+                .classList.remove("active");
+        }, 1000);
+    }
+});
+
+// Toggle Overlay Effect :
+function toggleOverlayEffect() {
+    document.querySelector(".overlay-effect").classList.toggle("active");
+}
+
+// ! ===========================
+// ! Change Website Color
 // ! ===========================
 let toggleBtn = document.querySelector(".nav__color-icon"),
     colorContainer = document.querySelector(".nav__color");
@@ -30,7 +81,7 @@ function changeColor() {
 }
 
 // ! ===========================
-// !Change About Tab
+// ! Change About Tab
 // ! ===========================
 const tabsContainer = document.querySelector(".about-tabs"),
     aboutSection = document.querySelector(".about-section");
@@ -53,7 +104,7 @@ tabsContainer.addEventListener("click", (e) => {
 });
 
 // ! ===========================
-// !Portfolio Popup
+// ! Portfolio Popup
 // ! ===========================
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("view-peoject")) {
@@ -90,9 +141,11 @@ document.addEventListener("click", (e) => {
     if (e.target.classList.contains("pp-inner")) togglePortfolioPopup();
 });
 
+// ! ===========================
+// ! Navigation Menu
+// ! ===========================
 const navigation = document.querySelector(".nav__menu");
 const list = navigation.querySelectorAll(".nav__list");
-
 list.forEach((li) => {
     li.onclick = (event) => {
         event.preventDefault();
