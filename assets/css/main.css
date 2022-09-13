@@ -15,7 +15,7 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --white-alpha-45: rgba(255, 255, 255, 0.45);
   --white-alpha-40: rgba(255, 255, 255, 0.4);
-  --backdrop-filter-blur: blur(15px);
+  --backdrop-filter-blur: blur(5px);
   --body-font: "Cairo", sans-serif;
   --bigger-font-size: 3.5rem;
   --big-font-size: 2rem;
@@ -163,6 +163,8 @@ section, header .nav .nav-inner {
           perspective: 1000px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-backdrop-filter: var(--backdrop-filter-blur);
+          backdrop-filter: var(--backdrop-filter-blur);
 }
 
 section.section, header .nav .section.nav-inner {
@@ -184,36 +186,60 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0px) scale(1);
+            transform: translateX(0px) scale(1);
   }
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0px) scale(1);
+            transform: translateX(0px) scale(1);
   }
 }
 
@@ -334,10 +360,11 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   display: inline-block;
   font-size: 26px;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--title-color);
   margin: 0;
   letter-spacing: 2px;
   text-shadow: 0 0 10px var(--first-color-alt);
+  text-transform: capitalize;
 }
 
 .section-title h2::before {
@@ -523,7 +550,7 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
 
 .overlay-effect .overlay-effect-item {
   height: 10vh;
-  background: white;
+  background: var(--first-color-lighter);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -618,7 +645,7 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
 .home-section .home-text p {
   font-size: 1.1rem;
   text-transform: capitalize;
-  color: var(--text-color);
+  color: var(--title-color);
   line-height: 0.5;
 }
 
@@ -631,7 +658,7 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
 .home-section .home-text h2 {
   text-transform: capitalize;
   font-size: 1.25rem;
-  color: var(--text-color);
+  color: var(--title-color);
   margin-bottom: 1rem;
 }
 
@@ -643,10 +670,15 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   gap: 0.5rem;
 }
 
+.home-section .home-image {
+  -webkit-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+}
+
 .home-section .home-image .image-box {
-  max-width: 360px;
+  max-width: 385px;
   width: 100%;
-  height: 360px;
+  height: 385px;
   background-color: var(--white-alpha-40);
   border-radius: 50%;
   border: 8px solid var(--white-alpha-40);
@@ -857,7 +889,7 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   display: block;
   line-height: 75px;
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--title-color);
   font-weight: 500;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1070,7 +1102,7 @@ header .nav .nav-inner ul li {
 header .nav .nav-inner ul li .nav-link {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--title-color);
   padding: 8px 15px;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -1108,18 +1140,30 @@ header .nav .nav-inner ul li .nav-link::before {
 @-webkit-keyframes headerFadeOut {
   0% {
     opacity: 1;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
 @keyframes headerFadeOut {
   0% {
     opacity: 1;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
@@ -1171,24 +1215,27 @@ header .nav .nav-inner ul li .nav-link::before {
 
 .about-section .container .about-image {
   width: 40%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .about-section .container .about-image .image-box {
-  max-width: 380px;
+  max-width: 400px;
   width: 100%;
-  height: 380px;
+  height: 400px;
   background-color: var(--white-alpha-40);
   border-radius: 0.5rem;
   border: 2px solid var(--white-alpha-40);
   margin: auto;
   -webkit-box-shadow: var(--box-shadow-alt);
           box-shadow: var(--box-shadow-alt);
+  overflow: hidden;
 }
 
 .about-section .container .about-image .image-box img {
   width: 100%;
   height: 100%;
+  -webkit-transform: translateY(13px) rotate(-11deg);
+          transform: translateY(13px) rotate(-11deg);
 }
 
 .about-section .container .about-text {
@@ -1205,7 +1252,7 @@ header .nav .nav-inner ul li .nav-link::before {
 .about-section .container .about-text h3 {
   text-transform: capitalize;
   margin-bottom: 0.5rem;
-  color: var(--text-color);
+  color: var(--title-color);
   font-weight: bold;
   margin-top: 2.2rem;
 }
@@ -1256,7 +1303,7 @@ header .nav .nav-inner ul li .nav-link::before {
   border: none;
   text-transform: capitalize;
   display: inline-block;
-  color: var(--text-color);
+  color: var(--title-color);
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: bold;
@@ -1490,7 +1537,7 @@ header .nav .nav-inner ul li .nav-link::before {
 .portfolio-popup .pp-inner .pp-content .pp-header h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--title-color);
   margin: 2rem 0 1.5rem;
 }
 
@@ -1505,7 +1552,7 @@ header .nav .nav-inner ul li .nav-link::before {
   margin-bottom: 1rem;
   font-weight: 500;
   text-transform: capitalize;
-  color: var(--text-color);
+  color: var(--title-color);
   font-weight: 600;
 }
 
@@ -1543,7 +1590,7 @@ header .nav .nav-inner ul li .nav-link::before {
   -webkit-box-shadow: var(--box-shadow-alt);
           box-shadow: var(--box-shadow-alt);
   padding: 0 1.2rem;
-  color: var(--text-color);
+  color: var(--title-color);
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -1618,14 +1665,14 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 .contact-section .contact-info .contact-info-item h3 {
-  color: var(--text-color);
+  color: var(--title-color);
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .contact-section .contact-info .contact-info-item a {
-  color: var(--text-color);
+  color: var(--title-color);
 }
 
 .contact-section .contact-info .contact-info-item a:visited, .contact-section .contact-info .contact-info-item a:focus {

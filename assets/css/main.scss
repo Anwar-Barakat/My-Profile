@@ -20,7 +20,7 @@
 
     --white-alpha-45: rgba(255, 255, 255, 0.45);
     --white-alpha-40: rgba(255, 255, 255, 0.4);
-    --backdrop-filter-blur: blur(15px);
+    --backdrop-filter-blur: blur(5px);
     //****************** Colors ******************
 
     //****************** Fonts ******************
@@ -178,6 +178,7 @@ section {
     box-shadow: var(--box-shadow-alt);
     perspective: 1000px;
     transform-style: preserve-3d;
+    backdrop-filter: var(--backdrop-filter-blur);
 }
 
 section.section {
@@ -197,26 +198,26 @@ section.section {
 @keyframes fadeOut {
     0% {
         opacity: 1;
-        // transform: translateX(0) scale(1);
-        // transform-origin: right;
+        transform: translateX(0) scale(1);
+        transform-origin: right;
     }
 
     100% {
         opacity: 0;
-        // transform: translateX(200px) scale(0.8);
+        transform: translateX(200px) scale(0.8);
     }
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        // transform: translateX(200px) scale(0.8);
-        // transform-origin: right;
+        transform: translateX(200px) scale(0.8);
+        transform-origin: right;
     }
 
     100% {
         opacity: 1;
-        // transform: translateX(0px) scale(1);
+        transform: translateX(0px) scale(1);
     }
 }
 
@@ -315,11 +316,11 @@ section.section {
         display: inline-block;
         font-size: 26px;
         font-weight: bold;
-        color: var(--text-color);
+        color: var(--title-color);
         margin: 0;
         letter-spacing: 2px;
         text-shadow: 0 0 10px var(--first-color-alt);
-
+        text-transform: capitalize;
         &::before {
             content: attr(data-heading);
             display: block;
@@ -436,7 +437,7 @@ section.section {
     visibility: hidden;
     .overlay-effect-item {
         height: 10vh;
-        background: white;
+        background: var(--first-color-lighter);
         transition: all 0.5s ease;
         &:nth-child(odd) {
             transform: translateX(-100%);
@@ -498,7 +499,7 @@ section.section {
         p {
             font-size: 1.1rem;
             text-transform: capitalize;
-            color: var(--text-color);
+            color: var(--title-color);
             line-height: 0.5;
         }
 
@@ -511,7 +512,7 @@ section.section {
         h2 {
             text-transform: capitalize;
             font-size: 1.25rem;
-            color: var(--text-color);
+            color: var(--title-color);
             margin-bottom: 1rem;
         }
 
@@ -523,10 +524,11 @@ section.section {
     }
 
     .home-image {
+        transform: rotate(-11deg);
         .image-box {
-            max-width: 360px;
+            max-width: 385px;
             width: 100%;
-            height: 360px;
+            height: 385px;
             background-color: var(--white-alpha-40);
             border-radius: 50%;
             border: 8px solid var(--white-alpha-40);
@@ -540,6 +542,8 @@ section.section {
         }
     }
 }
+
+//? =========================== Navigation  ===========================
 
 .nav__color {
     display: grid;
@@ -692,7 +696,7 @@ section.section {
                     display: block;
                     line-height: 75px;
                     font-size: 1.5rem;
-                    color: var(--text-color);
+                    color: var(--title-color);
                     font-weight: 500;
                     transition: all 0.5s ease-in-out;
                     transition-delay: 0.3s;
@@ -877,7 +881,7 @@ header {
                     .nav-link {
                         font-size: 2rem;
                         font-weight: 600;
-                        color: var(--text-color);
+                        color: var(--title-color);
                         padding: 8px 15px;
                         transition: color 0.3s ease-in-out;
                         position: relative;
@@ -918,13 +922,13 @@ header {
 @keyframes headerFadeOut {
     0% {
         opacity: 1;
-        // transform: translateX(0) scale(1);
-        // transform-origin: left;
+        transform: translateX(0) scale(1);
+        transform-origin: left;
     }
 
     100% {
         opacity: 0;
-        // transform: translateX(200px) scale(0.8);
+        transform: translateX(200px) scale(0.8);
     }
 }
 
@@ -957,21 +961,22 @@ header {
 
         .about-image {
             width: 40%;
-            margin: auto;
+            margin: 0 auto;
 
             .image-box {
-                max-width: 380px;
+                max-width: 400px;
                 width: 100%;
-                height: 380px;
+                height: 400px;
                 background-color: var(--white-alpha-40);
                 border-radius: 0.5rem;
                 border: 2px solid var(--white-alpha-40);
                 margin: auto;
                 box-shadow: var(--box-shadow-alt);
-
+                overflow: hidden;
                 img {
                     width: 100%;
                     height: 100%;
+                    transform: translateY(13px) rotate(-11deg);
                 }
             }
         }
@@ -989,7 +994,7 @@ header {
             h3 {
                 text-transform: capitalize;
                 margin-bottom: 0.5rem;
-                color: var(--text-color);
+                color: var(--title-color);
                 font-weight: bold;
                 margin-top: 2.2rem;
             }
@@ -1029,7 +1034,7 @@ header {
                     border: none;
                     text-transform: capitalize;
                     display: inline-block;
-                    color: var(--text-color);
+                    color: var(--title-color);
                     font-size: 1.1rem;
                     cursor: pointer;
                     font-weight: bold;
@@ -1243,7 +1248,7 @@ header {
                 h3 {
                     font-size: 1.5rem;
                     font-weight: 600;
-                    color: var(--text-color);
+                    color: var(--title-color);
                     margin: 2rem 0 1.5rem;
                 }
             }
@@ -1261,7 +1266,7 @@ header {
                         margin-bottom: 1rem;
                         font-weight: 500;
                         text-transform: capitalize;
-                        color: var(--text-color);
+                        color: var(--title-color);
                         font-weight: 600;
 
                         span {
@@ -1302,7 +1307,7 @@ header {
                 border: 1px solid var(--white-alpha-45);
                 box-shadow: var(--box-shadow-alt);
                 padding: 0 1.2rem;
-                color: var(--text-color);
+                color: var(--title-color);
                 font-size: 0.9rem;
                 font-weight: 500;
 
@@ -1351,14 +1356,14 @@ header {
             }
 
             h3 {
-                color: var(--text-color);
+                color: var(--title-color);
                 font-size: 1.2rem;
                 font-weight: 600;
                 text-transform: capitalize;
             }
 
             a {
-                color: var(--text-color);
+                color: var(--title-color);
 
                 &:visited,
                 &:focus {
