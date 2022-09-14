@@ -198,26 +198,26 @@ section.section {
 @keyframes fadeOut {
     0% {
         opacity: 1;
-        transform: translateX(0) scale(1);
-        transform-origin: right;
+        transform: translateY(0) scale(1);
+        transform-origin: bottom center;
     }
 
     100% {
         opacity: 0;
-        transform: translateX(200px) scale(0.8);
+        transform: translateY(200px) scale(0.8);
     }
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateX(200px) scale(0.8);
-        transform-origin: right;
+        transform: translateY(200px) scale(0.8);
+        transform-origin: bottom center;
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0px) scale(1);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -818,26 +818,26 @@ header {
 @keyframes headerFadeOut {
     0% {
         opacity: 1;
-        transform: translateX(0) scale(1);
-        transform-origin: left;
+        transform: translateY(0) scale(1);
+        transform-origin: top center;
     }
 
     100% {
         opacity: 0;
-        transform: translateX(200px) scale(0.8);
+        transform: translateY(200px) scale(0.8);
     }
 }
 
 @keyframes headerFadeIn {
     0% {
         opacity: 0;
-        transform: translateX(-200px) scale(0.8);
-        transform-origin: left;
+        transform: translateY(-200px) scale(0.8);
+        transform-origin: top center;
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0px) scale(1);
+        transform: translateY(0px) scale(1);
     }
 }
 
