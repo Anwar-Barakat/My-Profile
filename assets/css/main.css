@@ -1415,7 +1415,8 @@ header .nav .nav-inner ul li .nav-link::before {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25% 75%;
@@ -1481,6 +1482,16 @@ header .nav .nav-inner ul li .nav-link::before {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .contact-section .auto-grid .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 820px) {
@@ -1491,9 +1502,9 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 @media screen and (max-width: 750px) {
-  .section-title {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+  .section-title .box-light .topLayer,
+  .section-title .box-light .lightbar {
+    display: none;
   }
   .portfolio-popup .pp-inner {
     padding: 40px;
@@ -1502,39 +1513,21 @@ header .nav .nav-inner ul li .nav-link::before {
 
 @media screen and (max-width: 551px) {
   body {
-    padding: 1.5em;
+    padding: 0.5rem;
   }
-}
-
-@media screen and (max-width: 551px) and (max-width: 750px) {
-  .section-title {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-}
-
-@media screen and (max-width: 551px) {
   .nav__color {
     top: 10%;
   }
+  .section-title .box-light {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .custom-btn {
     letter-spacing: initial;
-  }
-  .auto-grid {
-    padding: 0 1em;
-  }
-  .auto-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 2em;
   }
   header .nav-toggle {
     width: 40px;
@@ -1558,8 +1551,8 @@ header .nav .nav-inner ul li .nav-link::before {
   }
   .home-section .auto-grid .home-image .image-box,
   .about-section .container .about-image .image-box {
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
   }
   .about-section .container .about-text .tab-content .timeline .timeline-item h4 {
     font-size: 1em;
@@ -1576,30 +1569,35 @@ header .nav .nav-inner ul li .nav-link::before {
     letter-spacing: 0;
     font-size: 0.8em;
   }
-}
-
-@media screen and (max-width: 475px) and (max-width: 750px) {
-  .section-title {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+  .auto-grid,
+  .home-section .auto-grid,
+  .contact-section .auto-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
   }
 }
 
 @media screen and (max-width: 440px) {
-  .home-section .auto-grid {
-    -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
   .home-section .auto-grid .home-text h1 {
     font-size: 2em;
   }
+  .auto-grid,
+  .home-section .auto-grid,
+  .contact-section .auto-grid {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
   .auto-grid {
     padding: 5px;
-  }
-  .home-section .auto-grid .home-image .image-box,
-  .about-section .container .about-image .image-box {
-    width: 250px;
-    height: 250px;
   }
   header .nav .nav-inner ul li .nav-link {
     font-size: 1.5em;
@@ -1617,11 +1615,6 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 @media screen and (max-width: 380px) {
-  .home-section .auto-grid .home-image .image-box,
-  .about-section .container .about-image .image-box {
-    width: 200px;
-    height: 200px;
-  }
   .auto-grid {
     padding: 0;
     font-size: 0.75em;
@@ -1633,22 +1626,11 @@ header .nav .nav-inner ul li .nav-link::before {
     letter-spacing: 0;
   }
   .about-section .container .about-text p {
-    max-width: 200px;
+    max-width: 100%;
   }
   .portfolio-section .portfolio-items {
-    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .home-section .auto-grid .home-image .image-box,
-  .about-section .container .about-image .image-box {
-    width: 150px;
-    height: 150px;
-  }
-  .about-section .container .about-text p {
-    max-width: 175px;
+    -ms-grid-columns: (minmax(160px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
 /*# sourceMappingURL=main.css.map */
