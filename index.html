@@ -48,7 +48,15 @@
             <header class="header">
                 <div class="container">
                     <div class="row space-between zIndex header-top">
-                        <a href="https://postimages.org/" target="_blank" class="logo"><img src="https://i.postimg.cc/QCyRWB1P/IMG-20220826-172957-743-removebg-preview.png" alt="IMG-20220826-172957-743-removebg-preview"/></a>                        <a href="#" class="nav-toggle">
+                        <a
+                            href="https://postimages.org/"
+                            target="_blank"
+                            class="logo"
+                            ><img
+                                src="https://i.postimg.cc/QCyRWB1P/IMG-20220826-172957-743-removebg-preview.png"
+                                alt="IMG-20220826-172957-743-removebg-preview"
+                        /></a>
+                        <a href="#" class="nav-toggle">
                             <span></span>
                         </a>
                     </div>
@@ -333,54 +341,56 @@
                     </div>
                 </div>
                 <div class="row contact">
-                    <form action="" class="contact-form">
-                        <div class="row">
-                            <div class="input-group">
-                                <input
-                                    type="text"
-                                    name=""
-                                    id=""
-                                    placeholder="Name"
-                                    class="input-control"
-                                    required
-                                />
-                            </div>
-                            <div class="input-group">
-                                <input
-                                    type="email"
-                                    name=""
-                                    id=""
-                                    placeholder="E-mail"
-                                    class="input-control"
-                                    required
-                                />
-                            </div>
-                            <div class="input-group">
-                                <input
-                                    type="text"
-                                    name=""
-                                    id=""
-                                    placeholder="Subject"
-                                    class="input-control"
-                                    required
-                                />
-                            </div>
-                            <div class="input-group">
-                                <textarea
-                                    name=""
-                                    id=""
-                                    cols="30"
-                                    rows="10"
-                                    placeholder="Message"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="input-group">
-                                <a href="#" class="custom-btn send">
-                                    <i class="fab fa-telegram-plane icon"></i>
-                                    Send</a
+                    <form action="" class="contact__form grid contact-form">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="name" class="contact__label"
+                                    >Name</label
                                 >
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="contact__input"
+                                />
                             </div>
+                            <div class="contact__content">
+                                <label for="email" class="contact__label"
+                                    >E-mail</label
+                                >
+                                <input
+                                    type="text"
+                                    id="email"
+                                    class="contact__input"
+                                />
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="project" class="contact__label"
+                                >Project</label
+                            >
+                            <input
+                                type="text"
+                                id="project"
+                                class="contact__input"
+                            />
+                        </div>
+                        <div class="contact__content">
+                            <label for="message" class="contact__label"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                rows="7"
+                                class="contact__input"
+                            ></textarea>
+                        </div>
+                        <div class="contact__button">
+                            <a href="" class="button button--flex">
+                                <span>
+                                    Send Message
+                                    <i class="uil uil-message button__icon"></i>
+                                </span>
+                            </a>
                         </div>
                     </form>
                     <div class="contact-info">

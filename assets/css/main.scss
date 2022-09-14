@@ -305,13 +305,17 @@ section.section {
         }
     }
 }
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
 
 .section-title {
     flex: 0 0 100%;
     text-align: center;
     max-width: 100%;
     margin-bottom: 2em;
-
+    padding-top: 4em;
     h2 {
         display: inline-block;
         font-size: 26px;
@@ -505,7 +509,18 @@ section.section {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2em;
 }
-
+.header-image {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 370px;
+    max-height: 370px;
+    height: 100%;
+    background-color: var(--white-alpha-40);
+    border: 8px solid var(--white-alpha-40);
+    margin: auto;
+    border-radius: 1rem;
+    display: table-header-group;
+}
 //? =========================== Home Section  ===========================
 .home-section {
     display: flex;
@@ -546,24 +561,9 @@ section.section {
                 gap: 0.5em;
             }
         }
-
         .home-image {
-            transform: rotate(-11deg);
-
-            .image-box {
-                max-width: 385px;
-                width: 100%;
-                height: 385px;
-                background-color: var(--white-alpha-40);
-                border-radius: 50%;
-                border: 8px solid var(--white-alpha-40);
-                margin: auto;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                }
+            img {
+                @extend .header-image;
             }
         }
     }
@@ -846,26 +846,11 @@ header {
             max-width: 100%;
             padding: 0 15px;
         }
-
         .about-image {
             margin: 0 auto;
 
-            .image-box {
-                max-width: 400px;
-                width: 100%;
-                height: 400px;
-                background-color: var(--white-alpha-40);
-                border-radius: 0.5em;
-                border: 2px solid var(--white-alpha-40);
-                margin: auto;
-                box-shadow: var(--box-shadow-alt);
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    transform: translateY(13px) rotate(-11deg);
-                }
+            img {
+                @extend .header-image;
             }
         }
 
@@ -1174,92 +1159,77 @@ header {
 //? =========================== Contact Section  ===========================
 
 .contact-section {
-    .contact-form {
-        width: 60%;
-        flex: 0 0 60%;
-        padding: 0 1em 0 2em;
+    .auto-grid {
+        @extend .custom-grid;
 
-        .input-group {
-            width: 100%;
-            margin-bottom: 1.5em;
+        .contact__form {
+            padding: 0 1rem;
 
-            input,
-            textarea {
-                outline: none;
-                width: 90%;
-                height: 3.5em;
-                border-radius: 10px;
-                background: var(--white-alpha-40);
+            .contact__content {
+                background-color: var(--white-alpha-40);
                 border: 1px solid var(--white-alpha-45);
-                box-shadow: var(--box-shadow-alt);
-                padding: 0 1.2em;
-                color: var(--title-color);
-                font-size: 0.9em;
-                font-weight: 500;
+                padding: 0.75rem 1rem 0.25rem;
+                border-radius: 0.5rem;
 
-                &::placeholder {
-                    color: var(--text-color-light);
+                .contact__label {
+                    font-size: var(--smaller-font-size);
+                    color: var(--title-color);
+                }
+
+                .contact__input {
+                    width: 100%;
+                    background: transparent;
+                    outline: none;
+                    border: 0;
+                    color: var(--text-color);
+                    font-family: var(--body-font);
+                    font-size: var(--normal-font-size);
+                    padding: 0.25rem 0.5rem 0;
                 }
             }
-
-            textarea {
-                resize: none;
-                height: 100px;
-                line-height: 43px;
-                font-size: 1em;
-                font-weight: 500;
-            }
-
-            .send {
-                padding: 8px 15px;
-                font-size: 1em;
-            }
         }
-    }
 
-    .contact-info {
-        width: 40%;
-        flex: 0 0 40%;
-        padding: 0 1em;
+        .contact-info {
+            padding: 0 1em;
 
-        .contact-info-item {
-            margin: 0 0 30px;
-            padding: 20px 30px;
-            background: var(--white-alpha-40);
-            border: 1px solid var(--white-alpha-45);
-            -webkit-box-shadow: var(--box-shadow-alt);
-            box-shadow: var(--box-shadow-alt);
-            width: fit-content;
-            width: 360px;
-            display: grid;
-            grid-template-columns: 25% 75%;
-            align-items: center;
-            justify-content: center;
+            .contact-info-item {
+                margin: 0 0 30px;
+                padding: 20px 30px;
+                background: var(--white-alpha-40);
+                border: 1px solid var(--white-alpha-45);
+                -webkit-box-shadow: var(--box-shadow-alt);
+                box-shadow: var(--box-shadow-alt);
+                width: fit-content;
+                width: 360px;
+                display: grid;
+                grid-template-columns: 25% 75%;
+                align-items: center;
+                justify-content: center;
 
-            .icon {
-                font-size: 2em;
-                color: var(--first-color-lighter);
-            }
+                .icon {
+                    font-size: 2em;
+                    color: var(--first-color-lighter);
+                }
 
-            h3 {
-                color: var(--title-color);
-                font-size: 1.2em;
-                font-weight: 600;
-                text-transform: capitalize;
-            }
+                h3 {
+                    color: var(--title-color);
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
 
-            a {
-                color: var(--title-color);
+                a {
+                    color: var(--title-color);
 
-                &:visited,
-                &:focus {
-                    color: var(--text-color-light);
+                    &:visited,
+                    &:focus {
+                        color: var(--text-color-light);
+                    }
                 }
             }
         }
     }
 }
-
 @media screen and (max-width: 991px) {
     .container {
         padding: 0;

@@ -347,6 +347,12 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   width: 100%;
 }
 
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+}
+
 .section-title {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -354,6 +360,7 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   text-align: center;
   max-width: 100%;
   margin-bottom: 2em;
+  padding-top: 4em;
 }
 
 .section-title h2 {
@@ -630,12 +637,25 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
           transform: translateX(0%);
 }
 
-.custom-grid, .home-section .auto-grid {
+.custom-grid, .home-section .auto-grid, .contact-section .auto-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2em;
+}
+
+.header-image, .home-section .auto-grid .home-image img, .about-section .container .about-image img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 370px;
+  max-height: 370px;
+  height: 100%;
+  background-color: var(--white-alpha-40);
+  border: 8px solid var(--white-alpha-40);
+  margin: auto;
+  border-radius: 1rem;
+  display: table-header-group;
 }
 
 .home-section {
@@ -676,27 +696,6 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   display: -ms-flexbox;
   display: flex;
   gap: 0.5em;
-}
-
-.home-section .auto-grid .home-image {
-  -webkit-transform: rotate(-11deg);
-          transform: rotate(-11deg);
-}
-
-.home-section .auto-grid .home-image .image-box {
-  max-width: 385px;
-  width: 100%;
-  height: 385px;
-  background-color: var(--white-alpha-40);
-  border-radius: 50%;
-  border: 8px solid var(--white-alpha-40);
-  margin: auto;
-}
-
-.home-section .auto-grid .home-image .image-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
 }
 
 .nav__color {
@@ -1051,26 +1050,6 @@ header .nav .nav-inner ul li .nav-link::before {
   margin: 0 auto;
 }
 
-.about-section .container .about-image .image-box {
-  max-width: 400px;
-  width: 100%;
-  height: 400px;
-  background-color: var(--white-alpha-40);
-  border-radius: 0.5em;
-  border: 2px solid var(--white-alpha-40);
-  margin: auto;
-  -webkit-box-shadow: var(--box-shadow-alt);
-          box-shadow: var(--box-shadow-alt);
-  overflow: hidden;
-}
-
-.about-section .container .about-image .image-box img {
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translateY(13px) rotate(-11deg);
-          transform: translateY(13px) rotate(-11deg);
-}
-
 .about-section .container .about-text p {
   line-height: 1.8;
   font-size: 1em;
@@ -1395,77 +1374,38 @@ header .nav .nav-inner ul li .nav-link::before {
   color: var(--first-color);
 }
 
-.contact-section .contact-form {
-  width: 60%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-  padding: 0 1em 0 2em;
+.contact-section .auto-grid .contact__form {
+  padding: 0 1rem;
 }
 
-.contact-section .contact-form .input-group {
-  width: 100%;
-  margin-bottom: 1.5em;
-}
-
-.contact-section .contact-form .input-group input,
-.contact-section .contact-form .input-group textarea {
-  outline: none;
-  width: 90%;
-  height: 3.5em;
-  border-radius: 10px;
-  background: var(--white-alpha-40);
+.contact-section .auto-grid .contact__form .contact__content {
+  background-color: var(--white-alpha-40);
   border: 1px solid var(--white-alpha-45);
-  -webkit-box-shadow: var(--box-shadow-alt);
-          box-shadow: var(--box-shadow-alt);
-  padding: 0 1.2em;
+  padding: 0.75rem 1rem 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.contact-section .auto-grid .contact__form .contact__content .contact__label {
+  font-size: var(--smaller-font-size);
   color: var(--title-color);
-  font-size: 0.9em;
-  font-weight: 500;
 }
 
-.contact-section .contact-form .input-group input::-webkit-input-placeholder,
-.contact-section .contact-form .input-group textarea::-webkit-input-placeholder {
-  color: var(--text-color-light);
+.contact-section .auto-grid .contact__form .contact__content .contact__input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  padding: 0.25rem 0.5rem 0;
 }
 
-.contact-section .contact-form .input-group input:-ms-input-placeholder,
-.contact-section .contact-form .input-group textarea:-ms-input-placeholder {
-  color: var(--text-color-light);
-}
-
-.contact-section .contact-form .input-group input::-ms-input-placeholder,
-.contact-section .contact-form .input-group textarea::-ms-input-placeholder {
-  color: var(--text-color-light);
-}
-
-.contact-section .contact-form .input-group input::placeholder,
-.contact-section .contact-form .input-group textarea::placeholder {
-  color: var(--text-color-light);
-}
-
-.contact-section .contact-form .input-group textarea {
-  resize: none;
-  height: 100px;
-  line-height: 43px;
-  font-size: 1em;
-  font-weight: 500;
-}
-
-.contact-section .contact-form .input-group .send {
-  padding: 8px 15px;
-  font-size: 1em;
-}
-
-.contact-section .contact-info {
-  width: 40%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+.contact-section .auto-grid .contact-info {
   padding: 0 1em;
 }
 
-.contact-section .contact-info .contact-info-item {
+.contact-section .auto-grid .contact-info .contact-info-item {
   margin: 0 0 30px;
   padding: 20px 30px;
   background: var(--white-alpha-40);
@@ -1488,23 +1428,23 @@ header .nav .nav-inner ul li .nav-link::before {
           justify-content: center;
 }
 
-.contact-section .contact-info .contact-info-item .icon {
+.contact-section .auto-grid .contact-info .contact-info-item .icon {
   font-size: 2em;
   color: var(--first-color-lighter);
 }
 
-.contact-section .contact-info .contact-info-item h3 {
+.contact-section .auto-grid .contact-info .contact-info-item h3 {
   color: var(--title-color);
   font-size: 1.2em;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-.contact-section .contact-info .contact-info-item a {
+.contact-section .auto-grid .contact-info .contact-info-item a {
   color: var(--title-color);
 }
 
-.contact-section .contact-info .contact-info-item a:visited, .contact-section .contact-info .contact-info-item a:focus {
+.contact-section .auto-grid .contact-info .contact-info-item a:visited, .contact-section .auto-grid .contact-info .contact-info-item a:focus {
   color: var(--text-color-light);
 }
 

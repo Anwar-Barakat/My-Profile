@@ -55,14 +55,37 @@ function toggleOverlayEffect() {
 let toggleBtn = document.querySelector(".nav__color-icon"),
     colorContainer = document.querySelector(".nav__color");
 
-toggleBtn.addEventListener("click", () => {
-    colorContainer.classList.toggle("active");
+toggleBtn.addEventListener("click", (e) => {
+    if (
+        e.target.classList.contains("nav__color-icon") ||
+        e.target.classList.contains("fa-spin")
+    )
+        colorContainer.classList.toggle("active");
+    else if (
+        !e.target.classList.contains("nav__colors") ||
+        !e.target.classList.contains("colors") ||
+        !e.target.classList.contains("change-color")
+    ) {
+        colorContainer.classList.remove("active");
+    }
 });
 
 var colors = document.getElementsByClassName("change-color");
 for (i = 0; i < colors.length; i++) {
     colors[i].addEventListener("click", changeColor);
 }
+
+document.addEventListener("click", (e) => {
+    if (
+        e.target.classList.contains("nav__color") ||
+        e.target.classList.contains("nav__color-icon") ||
+        e.target.classList.contains("colors")
+    ) {
+        colorContainer.classList.add("active");
+    } else {
+        colorContainer.classList.remove("active");
+    }
+});
 
 const selectedColor = localStorage.getItem("selected-color");
 
