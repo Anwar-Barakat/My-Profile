@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap");
 
-//? ============================ Varibles CSS ===========================
+//? ===========================
+//? Varibles CSS
+//? ===========================
 :root {
     //****************** Colors ******************
     --hue-color: 340;
@@ -40,24 +42,9 @@
     --box-shadow-alt: #0000001a 0px 1px 3px 0px;
 }
 
-//? =========================== Varibles CSS ===========================
-
-//? =========================== Large Screen Font Size  ================
-@media screen and(min-width:968px) {
-    :root {
-        --big-font-size: 3em;
-        --h1-font-size: 2.25em;
-        --h2-font-size: 1.5em;
-        --h3-font-size: 1.25em;
-        --normal-font-size: 1em;
-        --small-font-size: 0.875em;
-        --smaller-font-size: 0.813em;
-    }
-}
-
-//? =========================== Large Screen Font Size  ================
-
-//? =========================== Global Settings  =======================
+//? ===========================
+//? Global Settings
+//? ===========================
 * {
     box-sizing: border-box;
     padding: 0;
@@ -167,8 +154,9 @@ textarea {
     background-color: var(--first-color-lighter);
 }
 
-//? =========================== CSS Classes  ===========================
-
+//? ===========================
+//? CSS Classes
+//? ===========================
 section {
     background-color: var(--white-alpha-40);
     border: 1px solid var(--white-alpha-45);
@@ -525,7 +513,9 @@ section.section {
     display: table-header-group;
 }
 
-//? =========================== Home Section  ===========================
+//? ===========================
+//? Home Section
+//? ===========================
 .home-section {
     display: flex;
     padding: 120px 0;
@@ -574,8 +564,9 @@ section.section {
     }
 }
 
-//? =========================== Navigation  ===========================
-
+//? ===========================
+//? Navigation
+//? ===========================
 .nav__color {
     display: grid;
     grid-template-columns: 80% 20%;
@@ -841,8 +832,9 @@ header {
     }
 }
 
-//? =========================== About Section  ===========================
-
+//? ===========================
+//? About Section
+//? ===========================
 .about-section {
     .container {
         display: flex;
@@ -1025,8 +1017,9 @@ header {
     }
 }
 
-//? =========================== Portfolio Section  ===========================
-
+//? ===========================
+//? Portfolio Section
+//? ===========================
 .portfolio-section {
     padding-bottom: 50px;
 
@@ -1164,7 +1157,9 @@ header {
     }
 }
 
-//? =========================== Contact Section  ===========================
+//? ===========================
+//? Contact Section
+//? ===========================
 
 .contact-section {
     .auto-grid {
@@ -1239,6 +1234,10 @@ header {
         }
     }
 }
+
+//? ===========================
+//? Responsive
+//? ===========================
 
 @media screen and (max-width: 991px) {
     .container {
@@ -1449,4 +1448,66 @@ header {
     .portfolio-section .portfolio-items {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
+}
+
+//? ===========================
+//? Loading Page
+//? ===========================
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--input-color);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: top center;
+    transition: 1s ease-in-out;
+    transition-delay: 2s;
+    .bouncer {
+        display: flex;
+        margin: 0 5px;
+        div {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--first-color);
+            margin: 0 3px;
+            animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite
+                alternate;
+            &:nth-child(1) {
+                animation-delay: 0s;
+            }
+            &:nth-child(2) {
+                animation-delay: 0.1s;
+            }
+            &:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+            &:nth-child(4) {
+                animation-delay: 0.3s;
+            }
+        }
+        @keyframes bouncer {
+            to {
+                opacity: 0.4;
+                transform: translateY(-70px);
+            }
+        }
+    }
+    &.fade-out {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-200%) scale(0.6);
+        z-index: -1;
+    }
+}
+
+@keyframes fadeLoader {
 }
