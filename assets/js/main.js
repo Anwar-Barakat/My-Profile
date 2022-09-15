@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
-    document.querySelector(".loader").classList.add("fade-out");
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+        document.querySelector(".loader").classList.add("fade-out");
+        window.scrollTo(0, 0);
+    }, 3000);
 });
 // ! ===========================
 // ! Toggle Navbar

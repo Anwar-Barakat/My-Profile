@@ -18,11 +18,20 @@
     <body>
         <!-- loader start -->
         <div class="loader">
-            <div class="bouncer">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="circle">
+                <div class="border" style="--i:0.01"></div>
+                <div class="border" style="--i:0.02"></div>
+                <div class="border" style="--i:0.03"></div>
+                <div class="border" style="--i:0.04"></div>
+                <div class="border" style="--i:0.05"></div>
+                <div class="border" style="--i:0.06"></div>
+                <div class="border" style="--i:0.07"></div>
+                <div class="border" style="--i:0.08"></div>
+                <div class="border" style="--i:0.09"></div>
+                <div class="border" style="--i:0.1"></div>
+                <div class="border" style="--i:0.11"></div>
+                <div class="border" style="--i:0.12"></div>
+                <div class="text">Loading ...</div>
             </div>
         </div>
         <!-- loader end -->
@@ -123,12 +132,15 @@
                             <h1>Anwar Barakat</h1>
                             <h2>full stack & laravel web developer</h2>
                             <div class="btns">
-                                <a href="#about" class="custom-btn nav-link">
+                                <a
+                                    href="#about"
+                                    class="custom-btn nav-link custom-btn-padding"
+                                >
                                     About me
                                 </a>
                                 <a
                                     href="#portfolio"
-                                    class="custom-btn nav-link"
+                                    class="custom-btn nav-link custom-btn-padding"
                                 >
                                     Latest works
                                 </a>
@@ -285,8 +297,174 @@
                     </div>
                 </div>
                 <div class="row">
+                    <ul class="filters">
+                        <li class="filter-item custom-btn" data-filter="all">
+                            all
+                        </li>
+                        <li
+                            class="filter-item custom-btn"
+                            data-filter="frontend"
+                        >
+                            frontend
+                        </li>
+                        <li
+                            class="filter-item custom-btn"
+                            data-filter="backend"
+                        >
+                            backend
+                        </li>
+                        <li
+                            class="filter-item custom-btn"
+                            data-filter="laravel"
+                        >
+                            laravel
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
                     <div class="portfolio-items">
-                        <div class="portfolio-item">
+                        <div class="portfolio-item filter frontend">
+                            <div class="portfolio-item-thumbnail">
+                                <img
+                                    src="assets/images/portfolio/mobile_template_2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <h3 class="portfolio-item-title">
+                                Mobile Template
+                            </h3>
+                            <a
+                                href="javascript:void(0);"
+                                class="custom-btn view-peoject"
+                            >
+                                demo
+                            </a>
+                            <div class="portfolio-item-details">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Itaque voluptatem eos
+                                    accusantium nobis iste pariatur! Nesciunt
+                                    rerum voluptate corporis illo.
+                                </div>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>
+                                            created - <span>4 dec 2020</span>
+                                        </li>
+                                        <li>
+                                            technologies used -
+                                            <span>html, scss, bootstrap</span>
+                                        </li>
+                                        <li>Role - <span>FrontEnd</span></li>
+                                        <li>
+                                            view online -
+                                            <span
+                                                ><a
+                                                    href="www.domain.com"
+                                                    target="_blank"
+                                                    >www.domain.com</a
+                                                ></span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item filter backend">
+                            <div class="portfolio-item-thumbnail">
+                                <img
+                                    src="assets/images/portfolio/mobile_template_2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <h3 class="portfolio-item-title">
+                                Mobile Template
+                            </h3>
+                            <a
+                                href="javascript:void(0);"
+                                class="custom-btn view-peoject"
+                            >
+                                demo
+                            </a>
+                            <div class="portfolio-item-details">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Itaque voluptatem eos
+                                    accusantium nobis iste pariatur! Nesciunt
+                                    rerum voluptate corporis illo.
+                                </div>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>
+                                            created - <span>4 dec 2020</span>
+                                        </li>
+                                        <li>
+                                            technologies used -
+                                            <span>html, scss, bootstrap</span>
+                                        </li>
+                                        <li>Role - <span>FrontEnd</span></li>
+                                        <li>
+                                            view online -
+                                            <span
+                                                ><a
+                                                    href="www.domain.com"
+                                                    target="_blank"
+                                                    >www.domain.com</a
+                                                ></span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item filter backend">
+                            <div class="portfolio-item-thumbnail">
+                                <img
+                                    src="assets/images/portfolio/mobile_template_2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <h3 class="portfolio-item-title">
+                                Mobile Template
+                            </h3>
+                            <a
+                                href="javascript:void(0);"
+                                class="custom-btn view-peoject"
+                            >
+                                demo
+                            </a>
+                            <div class="portfolio-item-details">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Itaque voluptatem eos
+                                    accusantium nobis iste pariatur! Nesciunt
+                                    rerum voluptate corporis illo.
+                                </div>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>
+                                            created - <span>4 dec 2020</span>
+                                        </li>
+                                        <li>
+                                            technologies used -
+                                            <span>html, scss, bootstrap</span>
+                                        </li>
+                                        <li>Role - <span>FrontEnd</span></li>
+                                        <li>
+                                            view online -
+                                            <span
+                                                ><a
+                                                    href="www.domain.com"
+                                                    target="_blank"
+                                                    >www.domain.com</a
+                                                ></span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item filter laravel">
                             <div class="portfolio-item-thumbnail">
                                 <img
                                     src="assets/images/portfolio/mobile_template_2.png"
@@ -394,7 +572,7 @@
                             ></textarea>
                         </div>
                         <div class="contact__button">
-                            <a href="" class="custom-btn">
+                            <a href="" class="custom-btn custom-btn-padding">
                                 Send Message
                                 <i class="fab fa-telegram"></i>
                             </a>
@@ -451,8 +629,18 @@
         </div>
         <!-- portfolio popup end -->
 
+        <!-- jQuery cdn -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"
+        ></script>
+
         <!-- fontawesome cdn  -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+        <!-- custom jquery js  -->
+        <script src="assets/js/jquery-main.js"></script>
 
         <!-- custom js -->
         <script src="assets/js/main.js"></script>
