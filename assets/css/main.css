@@ -16,6 +16,7 @@
   --white-alpha-45: rgba(255, 255, 255, 0.45);
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --backdrop-filter-blur: blur(5px);
+  --loading: hsl(var(--hue-color), 92%, 85%);
   --body-font: "Cairo", sans-serif;
   --bigger-font-size: 3.5em;
   --big-font-size: 2em;
@@ -70,7 +71,7 @@ body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 16%, 22%);
+  --input-color: hsl(var(--hue-color), 20%, 18%);
   --body-color: #121212;
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
@@ -79,8 +80,9 @@ body.dark-theme {
   --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
             0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
   --white-alpha-45: rgba(255, 255, 255, 0.2);
-  --white-alpha-40: rgba(255, 255, 255, 0.1);
+  --white-alpha-40: rgba(255, 255, 255, 0.05);
   --backdrop-filter-blur: blur(0);
+  --loading: hsl(230deg 60% 99% / 20%);
 }
 
 ul {
@@ -1140,6 +1142,7 @@ header .nav .nav-inner ul li .nav-link::before {
   display: -ms-grid;
   display: grid;
   gap: 0.5em;
+  margin-bottom: 2rem;
 }
 
 .about-section .container .about-text .skills .group {
@@ -1603,6 +1606,53 @@ header .nav .nav-inner ul li .nav-link::before {
   .portfolio-popup .pp-inner {
     padding: 40px;
   }
+  .about-section .experience .timeline .timeline-item:nth-child(odd) {
+    padding-left: 15px;
+    text-align: left;
+    padding-left: 75px;
+  }
+  .about-section .education .timeline .timeline-item:nth-child(odd) {
+    padding-right: 15px;
+    text-align: right;
+    padding-left: 75px;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(even) {
+    padding-right: 15px;
+    text-align: right;
+    padding-left: 75px;
+  }
+  .about-section .education .timeline .timeline-item:nth-child(even) {
+    padding-left: 15px;
+    text-align: left;
+    padding-left: 75px;
+  }
+  .about-section .experience .timeline::before,
+  .about-section .education .timeline::before {
+    left: 26px;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(even) .timeline-item-inner::before,
+  .about-section .education .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
+    left: -31px;
+    right: auto;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(even) .icon,
+  .about-section .education .timeline .timeline-item:nth-child(even) .icon {
+    left: -70px;
+  }
+  .about-section .education .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before {
+    left: -30px;
+  }
+  .about-section .education .timeline .timeline-item:nth-child(odd) .icon {
+    left: -70px;
+  }
+  .about-section .experience .timeline .timeline-item,
+  .about-section .education .timeline .timeline-item {
+    margin-bottom: 40px;
+  }
+  .about-section .experience .timeline .timeline-item:last-child,
+  .about-section .education .timeline .timeline-item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 551px) {
@@ -1750,7 +1800,7 @@ header .nav .nav-inner ul li .nav-link::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--first-color-lighter);
+  background-color: var(--body-color);
   visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -1762,7 +1812,7 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 .loader .circle {
-  background: var(--body-color-transparent);
+  background: var(--loading);
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -1861,5 +1911,187 @@ header .nav .nav-inner ul li .nav-link::before {
 
 @-webkit-keyframes fadeLoader {}
 
-@keyframes fadeLoader {}
+@keyframes fadeLoader {}.about-tabs {
+  max-width: 100%;
+  padding: 60px 15px 45px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+}
+
+.about-tabs .tab-item {
+  display: inline-block;
+  margin: 0 5px 10px;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.about-tabs .tab-item::after {
+  border-radius: 20px;
+}
+
+.about-tabs .tab-item:hover:not(.active) {
+  opacity: 0.5;
+}
+
+.about-tabs .tab-item.active {
+  color: var(--first-color);
+  background: var(--white-alpha-40);
+  -webkit-box-shadow: var(--box-shadow-alt);
+          box-shadow: var(--box-shadow-alt);
+}
+
+.tab-content {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  -webkit-animation: fadeInOut 0.3s ease-in-out;
+          animation: fadeInOut 0.3s ease-in-out;
+}
+
+.experience,
+.education {
+  padding-bottom: 80px;
+}
+
+.experience .timeline,
+.education .timeline {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  position: relative;
+  max-width: 100%;
+}
+
+.experience .timeline::before,
+.education .timeline::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  background: var(--first-color);
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.experience .timeline .timeline-item,
+.education .timeline .timeline-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.experience .timeline .timeline-item:nth-child(odd) .icon,
+.education .timeline .timeline-item:nth-child(odd) .icon {
+  left: -70px;
+}
+
+.experience .timeline .timeline-item:nth-child(even) .icon,
+.education .timeline .timeline-item:nth-child(even) .icon {
+  right: -70px;
+}
+
+.experience .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before,
+.education .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before {
+  left: -30px;
+}
+
+.experience .timeline .timeline-item:nth-child(even) .timeline-item-inner::before,
+.education .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
+  right: -30px;
+}
+
+.experience .timeline .timeline-item .timeline-item-inner,
+.education .timeline .timeline-item .timeline-item-inner {
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  background: var(--white-alpha-40);
+  border: 1px solid var(--white-alpha-45);
+  -webkit-box-shadow: var(--box-shadow-alt);
+          box-shadow: var(--box-shadow-alt);
+}
+
+.experience .timeline .timeline-item .timeline-item-inner::before,
+.education .timeline .timeline-item .timeline-item-inner::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  top: 37px;
+  background: var(--first-color);
+}
+
+.experience .timeline .timeline-item .timeline-item-inner .icon,
+.education .timeline .timeline-item .timeline-item-inner .icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  background: var(--input-color);
+  top: 18px;
+  border: 1px solid var(--white-alpha-45);
+  border-radius: 50%;
+  color: var(--first-color);
+}
+
+.experience .timeline .timeline-item .timeline-item-inner span,
+.education .timeline .timeline-item .timeline-item-inner span {
+  font-weight: 500;
+  display: block;
+  margin: 0 0 10px;
+  color: var(--first-color);
+}
+
+.experience .timeline .timeline-item .timeline-item-inner h3,
+.education .timeline .timeline-item .timeline-item-inner h3 {
+  font-weight: 600;
+  margin: 0 0 0;
+  font-size: 1.2rem;
+  color: var(--title-color);
+  text-transform: capitalize;
+}
+
+.experience .timeline .timeline-item .timeline-item-inner h4,
+.education .timeline .timeline-item .timeline-item-inner h4 {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.experience .timeline .timeline-item .timeline-item-inner p,
+.education .timeline .timeline-item .timeline-item-inner p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.experience .timeline .timeline-item:nth-child(odd),
+.education .timeline .timeline-item:nth-child(odd) {
+  padding-left: calc(50% + 50px);
+  text-align: left;
+}
+
+.experience .timeline .timeline-item:nth-child(even),
+.education .timeline .timeline-item:nth-child(even) {
+  padding-right: calc(50% + 50px);
+  text-align: right;
+}
 /*# sourceMappingURL=main.css.map */

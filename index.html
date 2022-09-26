@@ -24,7 +24,7 @@
 
     <body>
         <!-- loader start -->
-        <div class="loader">
+        <!-- <div class="loader">
             <div class="circle">
                 <div class="border" style="--i: 0.01"></div>
                 <div class="border" style="--i: 0.02"></div>
@@ -40,7 +40,7 @@
                 <div class="border" style="--i: 0.12"></div>
                 <div class="text">Loading ...</div>
             </div>
-        </div>
+        </div> -->
         <!-- loader end -->
 
         <!-- overlay start -->
@@ -70,7 +70,7 @@
                     </ul>
                 </div>
                 <div class="modes">
-                    <h4>light mode</h4>
+                    <h4 class="mode-text">dark mode</h4>
                     <div class="change-mode">
                         <i
                             class="uil uil-moon change__theme"
@@ -263,71 +263,148 @@
                                 </div>
                             </div>
 
-                            <div class="about-tabs">
-                                <button
-                                    type="button"
-                                    class="tab-item active"
-                                    data-target="#education"
-                                >
-                                    education
-                                </button>
-                                <button
-                                    type="button"
-                                    class="tab-item"
-                                    data-target="#experience"
-                                >
-                                    experience
-                                </button>
-                            </div>
-
-                            <!-- education start -->
-                            <div class="tab-content active" id="education">
-                                <div class="timeline">
-                                    <div class="timeline-item">
-                                        <span class="date">2016 - 2021</span>
-                                        <h4>
-                                            bachelor of computer enginnering -
-                                            <span>damasucs university</span>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Quia,
-                                            nisi.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- education end -->
-
-                            <!-- experience start -->
-                            <div class="tab-content" id="experience">
-                                <div class="timeline">
-                                    <div class="timeline-item">
-                                        <span class="date">2020 - 2022</span>
-                                        <h4>
-                                            web developer
-                                            <span></span>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Quia,
-                                            nisi.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- experience end -->
-
                             <div class="btns">
                                 <a href="#" class="custom-btn">
                                     download resume
+                                    <i
+                                        class="uil uil-download-alt button__icon"
+                                    ></i>
                                 </a>
                                 <a href="#contact" class="custom-btn nav-link">
-                                    contact me
+                                    Hire me
                                 </a>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container" style="display: grid">
+                    <div class="row">
+                        <div class="about-tabs">
+                            <span
+                                class="tab-item active"
+                                data-target=".education"
+                                >education</span
+                            >
+                            <span class="tab-item" data-target=".experience"
+                                >experience</span
+                            >
+                        </div>
+                    </div>
+                    <!-- experience -->
+                    <div class="row">
+                        <di class="experience tab-content">
+                            <div class="row">
+                                <div class="timeline">
+                                    <div class="row">
+                                        <!-- timeline item -->
+                                        <div class="timeline-item">
+                                            <div
+                                                class="timeline-item-inner outer-shadow"
+                                            >
+                                                <div class="icon">
+                                                    <i
+                                                        class="fas fa-briefcase"
+                                                    ></i>
+                                                </div>
+                                                <span>jun, 2021 - present</span>
+                                                <h3>full stack developer</h3>
+                                                <h4>Anwar Barakat</h4>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet
+                                                    consectetur adipisicing
+                                                    elit. Excepturi incidunt
+                                                    maxime voluptatum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- timeline item -->
+
+                                        <!-- timeline item -->
+                                        <div class="timeline-item">
+                                            <div
+                                                class="timeline-item-inner outer-shadow"
+                                            >
+                                                <div class="icon">
+                                                    <i
+                                                        class="fas fa-briefcase"
+                                                    ></i>
+                                                </div>
+                                                <span>jun, 2020 </span>
+                                                <h3>web designer</h3>
+                                                <h4>Anwar Barakat</h4>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet
+                                                    consectetur adipisicing
+                                                    elit. Excepturi incidunt
+                                                    maxime voluptatum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- timeline item -->
+
+                                        <!-- timeline item -->
+                                        <div class="timeline-item">
+                                            <div
+                                                class="timeline-item-inner outer-shadow"
+                                            >
+                                                <div class="icon">
+                                                    <i
+                                                        class="fas fa-briefcase"
+                                                    ></i>
+                                                </div>
+                                                <span>jun, 2023 - present</span>
+                                                <h3>Photoshoper</h3>
+                                                <h4>Anwar Barakat</h4>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet
+                                                    consectetur adipisicing
+                                                    elit. Excepturi incidunt
+                                                    maxime voluptatum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- timeline item -->
+                                    </div>
+                                </div>
+                            </div>
+                        </di>
+                    </div>
+                    <!-- experience -->
+
+                    <!-- experience -->
+                    <div class="row">
+                        <di class="education tab-content active">
+                            <div class="row">
+                                <div class="timeline">
+                                    <div class="row">
+                                        <!-- timeline item -->
+                                        <div class="timeline-item">
+                                            <div
+                                                class="timeline-item-inner outer-shadow"
+                                            >
+                                                <div class="icon">
+                                                    <i
+                                                        class="fas fa-briefcase"
+                                                    ></i>
+                                                </div>
+                                                <span>2016 - 2021</span>
+                                                <h3>computer enginnering</h3>
+                                                <h4>Anwar Barakat</h4>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet
+                                                    consectetur adipisicing
+                                                    elit. Excepturi incidunt
+                                                    maxime voluptatum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- timeline item -->
+                                    </div>
+                                </div>
+                            </div>
+                        </di>
+                    </div>
+                    <!-- experience -->
                 </div>
             </section>
             <!-- about end -->
@@ -691,6 +768,9 @@
 
         <!-- custom jquery js  -->
         <script src="assets/js/jquery-main.js"></script>
+
+        <!-- dark-light mode -->
+        <script src="assets/js/dark-light-mode.js"></script>
 
         <!-- custom js -->
         <script src="assets/js/main.js"></script>
