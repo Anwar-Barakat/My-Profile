@@ -85,7 +85,7 @@ body {
         --first-color-second: hsl(var(--hue-color), 30%, 8%);
         --title-color: hsl(var(--hue-color), 8%, 95%);
         --text-color: hsl(var(--hue-color), 8%, 75%);
-        --input-color: hsl(var(--hue-color), 29%, 16%);
+        --input-color: hsl(var(--hue-color), 16%, 22%);
         --body-color: #121212;
         --container-color: hsl(var(--hue-color), 29%, 16%);
         --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
@@ -95,9 +95,9 @@ body {
         --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
             0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
 
-        .button {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
+        --white-alpha-45: rgba(255, 255, 255, 0.2);
+        --white-alpha-40: rgba(255, 255, 255, 0.1);
+        --backdrop-filter-blur: blur(0);
     }
 }
 
@@ -503,9 +503,9 @@ section.section {
 
 .header-image {
     border-radius: 50%;
-    width: 100%;
     max-width: 370px;
     max-height: 370px;
+    width: 100%;
     height: 100%;
     background-color: var(--white-alpha-40);
     border: 8px solid var(--white-alpha-40);
@@ -513,9 +513,11 @@ section.section {
     border-radius: 1rem;
     display: table-header-group;
 }
+
 .custom-btn-padding {
     padding: 7px 15px;
 }
+
 //? ===========================
 //? Home Section
 //? ===========================
@@ -565,6 +567,34 @@ section.section {
             }
         }
     }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 50%;
+        right: -19px;
+        transform: translateY(-50%);
+
+        li {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            background: var(--white-alpha-40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--white-alpha-40);
+            border: 1px solid var(--white-alpha-45);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow-alt);
+
+            a {
+                color: var(--first-color);
+            }
+        }
+    }
 }
 
 //? ===========================
@@ -590,37 +620,57 @@ section.section {
         padding: 1em;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 0.3em;
+        justify-content: flex-start;
+        gap: 1rem;
         align-items: flex-start;
-        height: 80px;
         background-color: var(--white-alpha-40);
         border: 1px solid var(--white-alpha-45);
         border-radius: 10px;
-        backdrop-filter: blur(6px) saturate(200%);
+        backdrop-filter: blur(3px);
+        color: var(--title-color);
+        h4 {
+            text-transform: capitalize;
+        }
+        .colors-theme {
+            text-align: left;
+            .colors-theme-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-top: 6px;
+                li {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    margin: 0 1px 7px;
+                    border: 1px solid var(--body-color-transparent);
 
-        li {
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            margin: 0 1px 7px;
-            border: 1px solid var(--body-color-transparent);
+                    &:nth-child(1) {
+                        background-color: hsl(100, 69%, 61%);
+                    }
 
-            &:nth-child(1) {
-                background-color: hsl(142, 69%, 61%);
+                    &:nth-child(2) {
+                        background-color: hsl(210, 69%, 61%);
+                    }
+
+                    &:nth-child(3) {
+                        background-color: hsl(280, 69%, 61%);
+                    }
+
+                    &:nth-child(4) {
+                        background-color: hsl(340, 69%, 61%);
+                    }
+                }
             }
-
-            &:nth-child(2) {
-                background-color: hsl(210, 69%, 61%);
-            }
-
-            &:nth-child(3) {
-                background-color: hsl(280, 69%, 61%);
-            }
-
-            &:nth-child(4) {
-                background-color: hsl(340, 69%, 61%);
+        }
+        .modes {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: flex-start;
+            .change-mode {
+                cursor: pointer;
             }
         }
     }
@@ -854,6 +904,7 @@ header {
 
             img {
                 @extend .header-image;
+                margin-bottom: 1rem;
             }
         }
 
@@ -1025,6 +1076,7 @@ header {
 //? ===========================
 .portfolio-section {
     padding-bottom: 50px;
+
     .filters {
         display: flex;
         justify-content: center;
@@ -1034,16 +1086,19 @@ header {
         height: 50px;
         margin-bottom: 2rem;
         gap: 2rem;
+
         .filter-item {
             font-weight: 600;
             cursor: pointer;
         }
     }
+
     .portfolio-items {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2em 1.5em;
         padding: 0 2em;
+
         .portfolio-item {
             padding: 10px;
             background: var(--white-alpha-40);
@@ -1365,6 +1420,10 @@ header {
         }
     }
 
+    header .logo {
+        max-width: 30px;
+    }
+
     .home-section .auto-grid .home-image .image-box,
     .about-section .container .about-image .image-box {
         width: auto;
@@ -1400,6 +1459,7 @@ header {
         font-size: 0.8em;
     }
 
+    .custom-grid,
     .auto-grid,
     .home-section .auto-grid,
     .contact-section .auto-grid {
@@ -1416,6 +1476,7 @@ header {
         font-size: 2em;
     }
 
+    .custom-grid,
     .auto-grid,
     .home-section .auto-grid,
     .contact-section .auto-grid {
@@ -1444,6 +1505,7 @@ header {
 }
 
 @media screen and (max-width: 380px) {
+    .custom-grid,
     .auto-grid {
         padding: 0;
         font-size: 0.75em;
@@ -1484,6 +1546,7 @@ header {
     transform: scale(1);
     transform-origin: top center;
     transition: 1s ease-in-out;
+
     .circle {
         background: var(--body-color-transparent);
         height: 200px;
@@ -1499,6 +1562,7 @@ header {
         position: relative;
         transform-style: preserve-3d;
         perspective: 500px;
+
         .border {
             width: 220px;
             height: 220px;
@@ -1507,30 +1571,37 @@ header {
             position: absolute;
             animation: spin 15s linear calc(var(--i) * -1s) infinite;
         }
+
         .text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
         @keyframes spin {
             0% {
                 transform: rotateX(0) rotateY(20deg) rotateZ(0);
             }
+
             25% {
                 transform: rotateX(360deg) rotateY(20deg) rotateZ(90deg);
             }
+
             50% {
                 transform: rotateX(0) rotateY(20deg) rotateZ(180deg);
             }
+
             75% {
                 transform: rotateX(-360deg) rotateY(20deg) rotateZ(270deg);
             }
+
             100% {
                 transform: rotateX(0) rotateY(20deg) rotateZ(360deg);
             }
         }
     }
+
     &.fade-out {
         visibility: hidden;
         opacity: 0;

@@ -70,7 +70,7 @@ body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --input-color: hsl(var(--hue-color), 16%, 22%);
   --body-color: #121212;
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
@@ -78,10 +78,9 @@ body.dark-theme {
   --box-shadow: 0 -2px 10px rgb(0 0 0);
   --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
             0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
-}
-
-body.dark-theme .button {
-  background-color: rgba(255, 255, 255, 0.05);
+  --white-alpha-45: rgba(255, 255, 255, 0.2);
+  --white-alpha-40: rgba(255, 255, 255, 0.1);
+  --backdrop-filter-blur: blur(0);
 }
 
 ul {
@@ -635,9 +634,9 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
 
 .header-image, .home-section .auto-grid .home-image img, .about-section .container .about-image img {
   border-radius: 50%;
-  width: 100%;
   max-width: 370px;
   max-height: 370px;
+  width: 100%;
   height: 100%;
   background-color: var(--white-alpha-40);
   border: 8px solid var(--white-alpha-40);
@@ -690,6 +689,47 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   gap: 0.5em;
 }
 
+.home-section .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.home-section .socials li {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: var(--white-alpha-40);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--white-alpha-40);
+  border: 1px solid var(--white-alpha-45);
+  border-radius: 10px;
+  -webkit-box-shadow: var(--box-shadow-alt);
+          box-shadow: var(--box-shadow-alt);
+}
+
+.home-section .socials li a {
+  color: var(--first-color);
+}
+
 .nav__color {
   display: -ms-grid;
   display: grid;
@@ -717,22 +757,40 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 0.3em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 80px;
   background-color: var(--white-alpha-40);
   border: 1px solid var(--white-alpha-45);
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(6px) saturate(200%);
-          backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  color: var(--title-color);
 }
 
-.nav__color .colors li {
+.nav__color .colors h4 {
+  text-transform: capitalize;
+}
+
+.nav__color .colors .colors-theme {
+  text-align: left;
+}
+
+.nav__color .colors .colors-theme .colors-theme-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 6px;
+}
+
+.nav__color .colors .colors-theme .colors-theme-list li {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -741,20 +799,37 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   border: 1px solid var(--body-color-transparent);
 }
 
-.nav__color .colors li:nth-child(1) {
-  background-color: #57e089;
+.nav__color .colors .colors-theme .colors-theme-list li:nth-child(1) {
+  background-color: #85e057;
 }
 
-.nav__color .colors li:nth-child(2) {
+.nav__color .colors .colors-theme .colors-theme-list li:nth-child(2) {
   background-color: #579ce0;
 }
 
-.nav__color .colors li:nth-child(3) {
+.nav__color .colors .colors-theme .colors-theme-list li:nth-child(3) {
   background-color: #b257e0;
 }
 
-.nav__color .colors li:nth-child(4) {
+.nav__color .colors .colors-theme .colors-theme-list li:nth-child(4) {
   background-color: #e05785;
+}
+
+.nav__color .colors .modes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav__color .colors .modes .change-mode {
+  cursor: pointer;
 }
 
 .nav__color .nav__color-icon {
@@ -1040,6 +1115,10 @@ header .nav .nav-inner ul li .nav-link::before {
 
 .about-section .container .about-image {
   margin: 0 auto;
+}
+
+.about-section .container .about-image img {
+  margin-bottom: 1rem;
 }
 
 .about-section .container .about-text p {
@@ -1564,6 +1643,9 @@ header .nav .nav-inner ul li .nav-link::before {
   .home-section .home-text h2 {
     font-size: 0.9em;
   }
+  header .logo {
+    max-width: 30px;
+  }
   .home-section .auto-grid .home-image .image-box,
   .about-section .container .about-image .image-box {
     width: auto;
@@ -1584,6 +1666,7 @@ header .nav .nav-inner ul li .nav-link::before {
     letter-spacing: 0;
     font-size: 0.8em;
   }
+  .custom-grid, .home-section .auto-grid, .contact-section .auto-grid,
   .auto-grid,
   .home-section .auto-grid,
   .contact-section .auto-grid {
@@ -1605,6 +1688,7 @@ header .nav .nav-inner ul li .nav-link::before {
   .home-section .auto-grid .home-text h1 {
     font-size: 2em;
   }
+  .custom-grid, .home-section .auto-grid, .contact-section .auto-grid,
   .auto-grid,
   .home-section .auto-grid,
   .contact-section .auto-grid {
@@ -1630,6 +1714,7 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 @media screen and (max-width: 380px) {
+  .custom-grid, .home-section .auto-grid, .contact-section .auto-grid,
   .auto-grid {
     padding: 0;
     font-size: 0.75em;

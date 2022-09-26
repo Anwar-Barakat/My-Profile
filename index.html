@@ -11,6 +11,13 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
+
+        <!--  UNICONS -->
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
+
         <!-- custom css -->
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
@@ -19,18 +26,18 @@
         <!-- loader start -->
         <div class="loader">
             <div class="circle">
-                <div class="border" style="--i:0.01"></div>
-                <div class="border" style="--i:0.02"></div>
-                <div class="border" style="--i:0.03"></div>
-                <div class="border" style="--i:0.04"></div>
-                <div class="border" style="--i:0.05"></div>
-                <div class="border" style="--i:0.06"></div>
-                <div class="border" style="--i:0.07"></div>
-                <div class="border" style="--i:0.08"></div>
-                <div class="border" style="--i:0.09"></div>
-                <div class="border" style="--i:0.1"></div>
-                <div class="border" style="--i:0.11"></div>
-                <div class="border" style="--i:0.12"></div>
+                <div class="border" style="--i: 0.01"></div>
+                <div class="border" style="--i: 0.02"></div>
+                <div class="border" style="--i: 0.03"></div>
+                <div class="border" style="--i: 0.04"></div>
+                <div class="border" style="--i: 0.05"></div>
+                <div class="border" style="--i: 0.06"></div>
+                <div class="border" style="--i: 0.07"></div>
+                <div class="border" style="--i: 0.08"></div>
+                <div class="border" style="--i: 0.09"></div>
+                <div class="border" style="--i: 0.1"></div>
+                <div class="border" style="--i: 0.11"></div>
+                <div class="border" style="--i: 0.12"></div>
                 <div class="text">Loading ...</div>
             </div>
         </div>
@@ -52,15 +59,29 @@
         <!-- overlay start -->
 
         <div class="nav__color">
-            <ul class="colors">
-                <li data-color="142" class="change-color"></li>
-                <li data-color="210" class="change-color"></li>
-                <li data-color="280" class="change-color"></li>
-                <li data-color="340" class="change-color"></li>
-            </ul>
-            <a href="javascript:void(0);" class="nav__color-icon">
-                <i class="fas fa-cog fa-spin"></i>
-            </a>
+            <div class="colors">
+                <div class="colors-theme">
+                    <h4>Theme Colors</h4>
+                    <ul class="colors-theme-list">
+                        <li data-color="100" class="change-color"></li>
+                        <li data-color="210" class="change-color"></li>
+                        <li data-color="280" class="change-color"></li>
+                        <li data-color="340" class="change-color"></li>
+                    </ul>
+                </div>
+                <div class="modes">
+                    <h4>light mode</h4>
+                    <div class="change-mode">
+                        <i
+                            class="uil uil-moon change__theme"
+                            id="theme-btn"
+                        ></i>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="nav__color-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </a>
+            </div>
         </div>
         <!-- main start -->
         <div class="main">
@@ -133,10 +154,11 @@
                             <h2>full stack & laravel web developer</h2>
                             <div class="btns">
                                 <a
-                                    href="#about"
+                                    href="#contact"
                                     class="custom-btn nav-link custom-btn-padding"
                                 >
-                                    About me
+                                    <i class="uil uil-message button__icon"></i>
+                                    Contact
                                 </a>
                                 <a
                                     href="#portfolio"
@@ -160,6 +182,34 @@
                         </div>
                     </div>
                 </div>
+                <ul class="socials">
+                    <li>
+                        <a
+                            href="https://www.facebook.com/AnwarBarakat97"
+                            target="_blank"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://codepen.io/anwar-barakat"
+                            target="_blank"
+                            ><i class="fab fa-codepen"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/Anwar-Barakat"
+                            target="_blank"
+                            ><i class="fab fa-github"></i
+                        ></a>
+                    </li>
+                </ul>
             </section>
             <!-- home end -->
 
