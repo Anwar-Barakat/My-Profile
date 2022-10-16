@@ -78,7 +78,7 @@ toggleBtn.addEventListener("click", (e) => {
 
 var colors = document.getElementsByClassName("change-color");
 for (i = 0; i < colors.length; i++) {
-    colors[i].addEventListener("click", changeColor);
+    colors[i].onclick = changeColor;
 }
 
 document.addEventListener("click", (e) => {
