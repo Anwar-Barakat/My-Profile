@@ -1,0 +1,18 @@
+.skills-section {
+    display: flex;
+    padding: 120px 0;
+
+    .skills-charts {
+        display: grid;
+        grid-template-columns: 1.8fr 1.2fr;
+        gap: 2rem;
+        .frontend-skill,
+        .backend-skill {
+            padding: 15px;
+            background-color: var(--white-alpha-40);
+            border: var(--white-alpha-45);
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
