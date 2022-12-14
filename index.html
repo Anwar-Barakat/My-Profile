@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Personal Portfolio</title>
 
     <!-- fontawesome cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!--  UNICONS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
 
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/main.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- loader start -->
     <!-- <div class="loader">
             <div class="circle">
@@ -40,1006 +45,1041 @@
 
     <!-- overlay start -->
     <div class="overlay-effect">
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
-        <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
     </div>
     <!-- overlay start -->
 
     <div class="nav__color">
-        <div class="colors">
-            <div class="colors-theme">
-                <h4>Theme Colors</h4>
-                <ul class="colors-theme-list">
-                    <li data-color="100" class="change-color"></li>
-                    <li data-color="210" class="change-color"></li>
-                    <li data-color="280" class="change-color"></li>
-                    <li data-color="340" class="change-color"></li>
-                </ul>
-            </div>
-            <div class="modes">
-                <h4 class="mode-text">dark mode</h4>
-                <div class="change-mode">
-                    <i class="uil uil-moon change__theme" id="theme-btn"></i>
-                </div>
-            </div>
-            <a href="javascript:void(0);" class="nav__color-icon">
-                <i class="fas fa-cog fa-spin"></i>
-            </a>
+      <div class="colors">
+        <div class="colors-theme">
+          <h4>Theme Colors</h4>
+          <ul class="colors-theme-list">
+            <li data-color="100" class="change-color"></li>
+            <li data-color="210" class="change-color"></li>
+            <li data-color="280" class="change-color"></li>
+            <li data-color="340" class="change-color"></li>
+          </ul>
         </div>
+        <div class="modes">
+          <h4 class="mode-text">dark mode</h4>
+          <div class="change-mode">
+            <i class="uil uil-moon change__theme" id="theme-btn"></i>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="nav__color-icon">
+          <i class="fas fa-cog fa-spin"></i>
+        </a>
+      </div>
     </div>
     <!-- main start -->
     <div class="main">
-        <!-- header start -->
-        <header class="header">
-            <div class="container">
-                <div class="row space-between zIndex header-top">
-                    <a href="https://postimages.org/" target="_blank" class="logo light"><img
-                            src="https://i.postimg.cc/QCyRWB1P/IMG-20220826-172957-743-removebg-preview.png"
-                            alt="IMG-20220826-172957-743-removebg-preview" /></a>
-                    <a href="#" class="nav-toggle">
-                        <span></span>
-                    </a>
-                </div>
-                <div class="row">
-                    <nav class="nav">
-                        <div class="nav-inner">
-                            <ul>
-                                <li>
-                                    <a href="#home" class="nav-link nav-item">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#about" class="nav-link nav-item">About Me</a>
-                                </li>
-                                <li>
-                                    <a href="#portfolio" class="nav-link nav-item">Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="#skills" class="nav-link nav-item">skills</a>
-                                </li>
-                                <li>
-                                    <a href="#contact" class="nav-link nav-item">Contact Me</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <!-- header end -->
-
-        <!-- home start -->
-        <section class="home-section section align-items-center active" id="home">
-            <div class="container">
-                <div class="row align-items-center auto-grid">
-                    <div class="home-text">
-                        <p>Hello, Buddy</p>
-                        <h1>Anwar Barakat</h1>
-                        <h2>full stack & laravel web developer</h2>
-                        <div class="btns">
-                            <a href="#contact" class="custom-btn nav-link custom-btn-padding">
-                                <i class="uil uil-message button__icon"></i>
-                                Contact
-                            </a>
-                            <a href="#portfolio" class="custom-btn nav-link custom-btn-padding">
-                                Latest works
-                            </a>
-                        </div>
-                    </div>
-                    <div class="home-image">
-                        <div class="image-box">
-                            <img loading="lazy" src="assets/images/home/anwar.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ul class="socials">
-                <li>
-                    <a href="https://www.facebook.com/AnwarBarakat97" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                    <a href="https://codepen.io/anwar-barakat" target="_blank"><i class="fab fa-codepen"></i></a>
-                </li>
-                <li>
-                    <a href="https://github.com/Anwar-Barakat" target="_blank"><i class="fab fa-github"></i></a>
-                </li>
-            </ul>
-        </section>
-        <!-- home end -->
-
-        <!-- about start -->
-        <section class="about-section section sec-padding" id="about">
-            <div class="row">
-                <div class="section-title">
-                    <div class="box-light">
-                        <div class="lightbar"></div>
-                        <div class="topLayer"></div>
-                        <h2 data-heading="main info">about me</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row custom-grid">
-                    <div class="about-image">
-                        <div class="image-box">
-                            <img loading="lazy" src="assets/images/home/anwar.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Placeat porro dolores cum
-                            eaque labore minus nam debitis omnis odit rerum
-                        </p>
-                        <h3>skills</h3>
-                        <div class="skills">
-                            <div class="group">
-                                <div class="skill-item">HTML</div>
-                                <div class="skill-item">CSS</div>
-                                <div class="skill-item">JS</div>
-                            </div>
-                            <div class="group">
-                                <div class="skill-item">Bootstrap</div>
-                                <div class="skill-item">Tailwind</div>
-                                <div class="skill-item">VueJS</div>
-                            </div>
-                            <div class="group">
-                                <div class="skill-item">PHP</div>
-                                <div class="skill-item">MySQL</div>
-                                <div class="skill-item">Laravel</div>
-                            </div>
-                        </div>
-
-                        <div class="btns">
-                            <a href="#" class="custom-btn">
-                                download resume
-                                <i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                            <a href="#contact" class="custom-btn nav-link">
-                                Hire me
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container" style="display: grid">
-                <div class="row">
-                    <div class="about-tabs">
-                        <span class="tab-item active" data-target=".education">education</span>
-                        <span class="tab-item" data-target=".experience">experience</span>
-                    </div>
-                </div>
-                <!-- experience -->
-                <div class="row">
-                    <di class="experience tab-content">
-                        <div class="row">
-                            <div class="timeline">
-                                <div class="row">
-                                    <!-- timeline item -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <div class="icon">
-                                                <i class="fas fa-briefcase"></i>
-                                            </div>
-                                            <span>jun, 2021 - present</span>
-                                            <h3>full stack developer</h3>
-                                            <h4>Anwar Barakat</h4>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing
-                                                elit. Excepturi incidunt
-                                                maxime voluptatum!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item -->
-
-                                    <!-- timeline item -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <div class="icon">
-                                                <i class="fas fa-briefcase"></i>
-                                            </div>
-                                            <span>jun, 2020 </span>
-                                            <h3>web designer</h3>
-                                            <h4>Anwar Barakat</h4>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing
-                                                elit. Excepturi incidunt
-                                                maxime voluptatum!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item -->
-
-                                    <!-- timeline item -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <div class="icon">
-                                                <i class="fas fa-briefcase"></i>
-                                            </div>
-                                            <span>jun, 2023 - present</span>
-                                            <h3>Photoshoper</h3>
-                                            <h4>Anwar Barakat</h4>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing
-                                                elit. Excepturi incidunt
-                                                maxime voluptatum!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item -->
-                                </div>
-                            </div>
-                        </div>
-                    </di>
-                </div>
-                <!-- experience -->
-
-                <!-- experience -->
-                <div class="row">
-                    <di class="education tab-content active">
-                        <div class="row">
-                            <div class="timeline">
-                                <div class="row">
-                                    <!-- timeline item -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <div class="icon">
-                                                <i class="fas fa-briefcase"></i>
-                                            </div>
-                                            <span>2016 - 2021</span>
-                                            <h3>computer enginnering</h3>
-                                            <h4>Anwar Barakat</h4>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing
-                                                elit. Excepturi incidunt
-                                                maxime voluptatum!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item -->
-                                </div>
-                            </div>
-                        </div>
-                    </di>
-                </div>
-                <!-- experience -->
-            </div>
-        </section>
-        <!-- about end -->
-
-        <!-- portfolio start -->
-        <section class="portfolio-section section sec-padding" id="portfolio">
-            <div class="row">
-                <div class="section-title">
-                    <div class="box-light">
-                        <div class="lightbar"></div>
-                        <div class="topLayer"></div>
-                        <h2 data-heading="recent works">Portfolio</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <ul class="filters">
-                    <li class="filter-item custom-btn" data-filter="all">
-                        all
-                    </li>
-                    <li class="filter-item custom-btn" data-filter="frontend">
-                        frontend
-                    </li>
-                    <li class="filter-item custom-btn" data-filter="backend">
-                        backend
-                    </li>
+      <!-- header start -->
+      <header class="header">
+        <div class="container">
+          <div class="row space-between zIndex header-top">
+            <a href="https://postimages.org/" target="_blank" class="logo light"
+              ><img
+                src="https://i.postimg.cc/QCyRWB1P/IMG-20220826-172957-743-removebg-preview.png"
+                alt="IMG-20220826-172957-743-removebg-preview"
+            /></a>
+            <a href="#" class="nav-toggle">
+              <span></span>
+            </a>
+          </div>
+          <div class="row">
+            <nav class="nav">
+              <div class="nav-inner">
+                <ul>
+                  <li>
+                    <a href="#home" class="nav-link nav-item">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about" class="nav-link nav-item">About Me</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio" class="nav-link nav-item">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#skills" class="nav-link nav-item">skills</a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="nav-link nav-item">Contact Me</a>
+                  </li>
                 </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- home start -->
+      <section class="home-section section align-items-center active" id="home">
+        <div class="container">
+          <div class="row align-items-center auto-grid">
+            <div class="home-text">
+              <p>Hello, Buddy</p>
+              <h1>Anwar Barakat</h1>
+              <h2>A Creative Web Deisgner & PHPLaravel developer</h2>
+              <div class="btns">
+                <a
+                  href="#contact"
+                  class="custom-btn nav-link custom-btn-padding"
+                >
+                  <i class="uil uil-message button__icon"></i>
+                  Contact
+                </a>
+                <a
+                  href="#portfolio"
+                  class="custom-btn nav-link custom-btn-padding"
+                >
+                  <i class="uil uil-suitcase button__icon"></i>
+                  Latest works
+                </a>
+              </div>
             </div>
-            <div class="row">
-                <div class="portfolio-items">
-                    <div class="portfolio-item filter backend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/17 Movies App.PNG" alt="AN Movies App" />
-                        </div>
-                        <h3 class="portfolio-item-title">AN Movies App</h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>05 Oct 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>Laravel Framewok - API</span>
-                                    </li>
-                                    <li>Role - <span>Backend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/16 restaurant template.PNG" alt="Restaurant Template" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Restaurant Template
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>10 Sep 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, Javascript</span>
-                                    </li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="home-image">
+              <div class="image-box">
+                <img loading="lazy" src="assets/images/home/anwar.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com/AnwarBarakat97" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/anwar-barakat" target="_blank"
+              ><i class="fab fa-codepen"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Anwar-Barakat" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+      <!-- home end -->
 
-                    <div class="portfolio-item filter backend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/15 An School.PNG" alt="Laravel School Management" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Laravel School Management
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>01 Aug 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>Laravel Framewok</span>
-                                    </li>
-                                    <li>Role - <span>Backend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/14 Portfolio_3.PNG" alt="Third Portfolio" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Third Portfolio
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>02 May 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/13 Nike Shoes.PNG" alt="Nike Shoes Shop" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Nike Shoes Shop
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>02 Mar 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/12 Nature.PNG" alt="Amazing Sceneries" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Amazing Sceneries
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>20 Jan 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/11 Portfolio_2.PNG" alt="Second Portfolio" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Second Portfolio
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>13 Jan 2022</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter backend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/10 larave_blog.PNG" alt="Laravel CMS" />
-                        </div>
-                        <h3 class="portfolio-item-title">Laravel CMS</h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos,
-                                Lorem, ipsum dolor.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>02 Dec 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>Laravel Framework</span>
-                                    </li>
-                                    <li>Role - <span>Backend</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/9_ecomerce_design.png" alt="E-Commerce Design" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            E-Commerce Design
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>22 July 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/8_architecture.png" alt="Architecture Services" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Architecture Services
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>02 July 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/7 Portfolio_1.PNG" alt="First Portfolio" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            First Portfolio
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                                accusantium nobis iste pariatur! Nesciunt
-                                rerum voluptate corporis illo.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>15 May 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            jQuery</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/6_healthy_food.png" alt="Healthy Food Design" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Healthy Food Design
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                                accusantium nobis iste pariatur! Nesciunt
-                                rerum voluptate corporis illo.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>08 Jun 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/5_online_education.png" alt="Online Eduation Template" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Online Eduation Template
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                                accusantium nobis iste pariatur! Nesciunt
-                                rerum voluptate corporis illo.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>20 May 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/4_mobile_template.png" alt="Mobile Template" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Mobile Template
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Itaque voluptatem eos
-                                accusantium no
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>26 Mar 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript,
-                                            Bootstrap</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/3_quiz.PNG" alt="Quiz App" />
-                        </div>
-                        <h3 class="portfolio-item-title">Quiz App</h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>03 Mar 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/2_mobile_template.PNG" alt="Your App" />
-                        </div>
-                        <h3 class="portfolio-item-title">Your App</h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>11 Jan 2021</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item filter frontend">
-                        <div class="portfolio-item-thumbnail">
-                            <img loading="lazy" src="assets/images/portfolio/1_online_education.PNG" alt="Online Education Design" />
-                        </div>
-                        <h3 class="portfolio-item-title">
-                            Online Education Design
-                        </h3>
-                        <a href="javascript:void(0);" class="custom-btn view-peoject">
-                            demo
-                        </a>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>
-                                        created - <span>21 Oct 2020</span>
-                                    </li>
-                                    <li>
-                                        technologies used -
-                                        <span>HTML, SCSS, JavaScript</span>
-                                    </li>
-                                    <li>Role - <span>FrontEnd</span></li>
-                                    <li>
-                                        view online -
-                                        <span><a href="www.domain.com" target="_blank">www.domain.com</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+      <!-- about start -->
+      <section class="about-section section sec-padding" id="about">
+        <div class="row">
+          <div class="section-title">
+            <div class="box-light">
+              <div class="lightbar"></div>
+              <div class="topLayer"></div>
+              <h2 data-heading="main info">about me</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row custom-grid" style="width: 100%">
+            <div class="about-image">
+              <div class="image-box">
+                <img loading="lazy" src="assets/images/home/anwar.png" alt="" />
+              </div>
+            </div>
+            <div class="about-text">
+              <p>
+                Welcome to my Portfolio. <br />
+                Anwar, A creative Web Designer And PHP/Laravel Developer. <br />
+              </p>
+              <h3>skills</h3>
+              <div class="skills">
+                <div class="group">
+                  <div class="skill-item">HTML</div>
+                  <div class="skill-item">CSS</div>
+                  <div class="skill-item">JS</div>
                 </div>
-            </div>
-        </section>
-        <!-- portfolio end -->
-
-        <!-- home start -->
-        <section class="skills-section section align-items-center" id="skills">
-            <div class="container">
-                <div class="skills-charts">
-                    <div class="frontend-skill">
-                        <canvas id="frontend"></canvas>
-                    </div>
-                    <div class="backend-skill">
-                        <canvas id="backend"></canvas>
-                    </div>
+                <div class="group">
+                  <div class="skill-item">Bootstrap</div>
+                  <div class="skill-item">Tailwind</div>
                 </div>
-            </div>
-        </section>
-        <!-- home end -->
-
-        <!-- contact start -->
-        <section class="contact-section section sec-padding" id="contact">
-            <div class="row">
-                <div class="section-title">
-                    <div class="box-light">
-                        <div class="lightbar"></div>
-                        <div class="topLayer"></div>
-                        <h2 data-heading="get in touch">Contact Me</h2>
-                    </div>
+                <div class="group">
+                  <div class="skill-item">PHP</div>
+                  <div class="skill-item">MySQL</div>
+                  <div class="skill-item">Laravel</div>
+                  <div class="skill-item">Livewire</div>
+                  <div class="skill-item">AlpineJS</div>
                 </div>
+              </div>
+
+              <div class="btns">
+                <a href="#" class="custom-btn">
+                  download resume
+                  <i class="uil uil-download-alt button__icon"></i>
+                </a>
+                <a href="#contact" class="custom-btn nav-link"> Hire me </a>
+              </div>
             </div>
-            <div class="row contact auto-grid">
-                <form action="" class="contact__form grid contact-form">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="name" class="contact__label">Name</label>
-                            <input type="text" id="name" class="contact__input" />
+          </div>
+        </div>
+        <div class="container" style="display: grid">
+          <div class="row">
+            <div class="about-tabs">
+              <span class="tab-item active" data-target=".education"
+                >education</span
+              >
+              <span class="tab-item" data-target=".experience">experience</span>
+            </div>
+          </div>
+          <!-- experience -->
+          <div class="row">
+            <di class="experience tab-content">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <div class="icon">
+                          <i class="fas fa-briefcase"></i>
                         </div>
-                        <div class="contact__content">
-                            <label for="email" class="contact__label">E-mail</label>
-                            <input type="text" id="email" class="contact__input" />
+                        <span>jun, 2021 - present</span>
+                        <h3>Backend Developer</h3>
+                        <h4>PHP & Laravel</h4>
+                        <p>...</p>
+                      </div>
+                    </div>
+                    <!-- timeline item -->
+
+                    <!-- timeline item -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <div class="icon">
+                          <i class="fas fa-briefcase"></i>
                         </div>
+                        <span>jun, 2020 </span>
+                        <h3>Web designer</h3>
+                        <p>I've been building more than 15 Splendid Design</p>
+                      </div>
                     </div>
-                    <div class="contact__content">
-                        <label for="project" class="contact__label">Project</label>
-                        <input type="text" id="project" class="contact__input" />
+                    <!-- timeline item -->
+                  </div>
+                </div>
+              </div>
+            </di>
+          </div>
+          <!-- experience -->
+
+          <!-- experience -->
+          <div class="row">
+            <di class="education tab-content active">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <div class="icon">
+                          <i class="fas fa-briefcase"></i>
+                        </div>
+                        <span>2016 - 2021</span>
+                        <h3>Software Enginnering</h3>
+                        <p>
+                          I studied Computer & Automation Engineering at the
+                          University of Damascus.
+                        </p>
+                      </div>
                     </div>
-                    <div class="contact__content">
-                        <label for="message" class="contact__label">Message</label>
-                        <textarea id="message" rows="7" class="contact__input"></textarea>
-                    </div>
-                    <div class="contact__button">
-                        <a href="" class="custom-btn custom-btn-padding">
-                            Send Message
-                            <i class="fab fa-telegram"></i>
+                    <!-- timeline item -->
+                  </div>
+                </div>
+              </div>
+            </di>
+          </div>
+          <!-- experience -->
+        </div>
+      </section>
+      <!-- about end -->
+
+      <!-- portfolio start -->
+      <section class="portfolio-section section sec-padding" id="portfolio">
+        <div class="row">
+          <div class="section-title">
+            <div class="box-light">
+              <div class="lightbar"></div>
+              <div class="topLayer"></div>
+              <h2 data-heading="recent works">Portfolio</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="filters">
+            <li class="filter-item custom-btn" data-filter="all">all</li>
+            <li class="filter-item custom-btn" data-filter="frontend">
+              frontend
+            </li>
+            <li class="filter-item custom-btn" data-filter="backend">
+              backend
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="portfolio-items">
+            <div class="portfolio-item filter backend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/17 Movies App.PNG"
+                  alt="AN Movies App"
+                />
+              </div>
+              <h3 class="portfolio-item-title">AN Movies App</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>05 Oct 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>Laravel Framewok - API</span>
+                    </li>
+                    <li>Role - <span>Backend</span></li>
+                    <li>
+                      view online -
+                      <span>
+                        <a href="www.domain.com" target="_blank"
+                          >www.domain.com
                         </a>
-                    </div>
-                </form>
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <i class="icon fas fa-envelope"></i>
-                        <div>
-                            <h3>E-mail</h3>
-                            <a href="javascript:void(0)">brkatanwar0@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="icon fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <a href="">Damascus - <span>Syria</span></a>
-                        </div>
-                    </div>
+                      </span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- contact end -->
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/16 restaurant template.PNG"
+                  alt="Restaurant Template"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Restaurant Template</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>10 Sep 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, Javascript</span>
+                    </li>
+                    <li>Role - <span>Frontend</span></li>
+                    <li>
+                      view online -
+                      <span>
+                        <a href="www.domain.com" target="_blank">
+                          www.domain.com
+                        </a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter backend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/15 An School.PNG"
+                  alt="Laravel School Management"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Laravel School Management</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>01 Sep 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>Laravel Framewok</span>
+                    </li>
+                    <li>Role - <span>Backend</span></li>
+                    <li>
+                      view online -
+                      <span>
+                        <a href="www.domain.com" target="_blank">
+                          www.domain.com
+                        </a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/14 Portfolio_3.PNG"
+                  alt="Third Portfolio"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Third Portfolio</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>02 May 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>Frontend</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/13 Nike Shoes.PNG"
+                  alt="Nike Shoes Shop"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Nike Shoes Shop</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>02 Mar 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>Frontend</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/12 Nature.PNG"
+                  alt="Amazing Sceneries"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Amazing Sceneries</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>20 Jan 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>Frontend</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/11 Portfolio_2.PNG"
+                  alt="Second Portfolio"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Second Portfolio</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>13 Jan 2022</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>Frontend</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter backend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/10 larave_blog.PNG"
+                  alt="Laravel CMS"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Laravel CMS</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos, Lorem, ipsum dolor.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>02 Dec 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>Laravel Framework</span>
+                    </li>
+                    <li>Role - <span>Backend</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/9_ecomerce_design.png"
+                  alt="E-Commerce Design"
+                />
+              </div>
+              <h3 class="portfolio-item-title">E-Commerce Design</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>22 July 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/8_architecture.png"
+                  alt="Architecture Services"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Architecture Services</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>02 July 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/7 Portfolio_1.PNG"
+                  alt="First Portfolio"
+                />
+              </div>
+              <h3 class="portfolio-item-title">First Portfolio</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos accusantium nobis iste pariatur!
+                  Nesciunt rerum voluptate corporis illo.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>15 May 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, jQuery</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/6_healthy_food.png"
+                  alt="Healthy Food Design"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Healthy Food Design</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos accusantium nobis iste pariatur!
+                  Nesciunt rerum voluptate corporis illo.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>08 Jun 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/5_online_education.png"
+                  alt="Online Eduation Template"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Online Eduation Template</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos accusantium nobis iste pariatur!
+                  Nesciunt rerum voluptate corporis illo.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>20 May 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/4_mobile_template.png"
+                  alt="Mobile Template"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Mobile Template</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Itaque voluptatem eos accusantium no
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>26 Mar 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript, Bootstrap</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/3_quiz.PNG"
+                  alt="Quiz App"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Quiz App</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>03 Mar 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/2_mobile_template.PNG"
+                  alt="Your App"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Your App</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>11 Jan 2021</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item filter frontend">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  loading="lazy"
+                  src="assets/images/portfolio/1_online_education.PNG"
+                  alt="Online Education Design"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Online Education Design</h3>
+              <a href="javascript:void(0);" class="custom-btn view-peoject">
+                demo
+              </a>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>created - <span>21 Oct 2020</span></li>
+                    <li>
+                      technologies used -
+                      <span>HTML, SCSS, JavaScript</span>
+                    </li>
+                    <li>Role - <span>FrontEnd</span></li>
+                    <li>
+                      view online -
+                      <span
+                        ><a href="www.domain.com" target="_blank"
+                          >www.domain.com</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- portfolio end -->
+
+      <!-- home start -->
+      <section class="skills-section section align-items-center" id="skills">
+        <div class="container">
+          <div class="skills-charts">
+            <div class="frontend-skill">
+              <canvas id="frontend"></canvas>
+            </div>
+            <div class="backend-skill">
+              <canvas id="backend"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home end -->
+
+      <!-- contact start -->
+      <section class="contact-section section sec-padding" id="contact">
+        <div class="row">
+          <div class="section-title">
+            <div class="box-light">
+              <div class="lightbar"></div>
+              <div class="topLayer"></div>
+              <h2 data-heading="get in touch">Contact Me</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row contact auto-grid">
+          <form action="" class="contact__form grid contact-form">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label for="name" class="contact__label">Name</label>
+                <input type="text" id="name" class="contact__input" />
+              </div>
+              <div class="contact__content">
+                <label for="email" class="contact__label">E-mail</label>
+                <input type="text" id="email" class="contact__input" />
+              </div>
+            </div>
+            <div class="contact__content">
+              <label for="project" class="contact__label">Project</label>
+              <input type="text" id="project" class="contact__input" />
+            </div>
+            <div class="contact__content">
+              <label for="message" class="contact__label">Message</label>
+              <textarea id="message" rows="7" class="contact__input"></textarea>
+            </div>
+            <div class="contact__button">
+              <a href="" class="custom-btn custom-btn-padding">
+                Send Message
+                <i class="fab fa-telegram"></i>
+              </a>
+            </div>
+          </form>
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <i class="icon fas fa-envelope"></i>
+              <div>
+                <h3>E-mail</h3>
+                <a href="javascript:void(0)">brkatanwar0@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="icon fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <a href="">Damascus - <span>Syria</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact end -->
     </div>
     <!-- main end -->
 
     <!-- portfolio popup start -->
     <div class="portfolio-popup">
-        <div class="pp-inner">
-            <div class="pp-content">
-                <div class="pp-header">
-                    <a href="javascript:void(0)" class="custom-btn pp-close">
-                        <i class="fas fa-times"></i>
-                    </a>
-                    <div class="pp-thumbnail">
-                        <img loading="lazy" src="" alt="" />
-                    </div>
-                    <h3></h3>
-                </div>
-                <div class="pp-body">
-                    <div class="portfolio-item-details">
-                        <div class="description"></div>
-                        <div class="general-info"></div>
-                    </div>
-                </div>
+      <div class="pp-inner">
+        <div class="pp-content">
+          <div class="pp-header">
+            <a href="javascript:void(0)" class="custom-btn pp-close">
+              <i class="fas fa-times"></i>
+            </a>
+            <div class="pp-thumbnail">
+              <img loading="lazy" src="" alt="" />
             </div>
+            <h3></h3>
+          </div>
+          <div class="pp-body">
+            <div class="portfolio-item-details">
+              <div class="description"></div>
+              <div class="general-info"></div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- portfolio popup end -->
 
     <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- fontawesome cdn  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
@@ -1059,6 +1099,5 @@
     <!-- custome chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="custom-chart.js"></script>
-</body>
-
+  </body>
 </html>
