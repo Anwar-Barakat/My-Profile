@@ -1547,7 +1547,7 @@ header .nav .nav-inner ul li .nav-link::before {
   font-size: 1.5em;
   font-weight: 600;
   color: var(--title-color);
-  margin: 2em 0 1.5em;
+  margin: 2em 0 0.5em;
 }
 
 .portfolio-popup .pp-inner .pp-content .pp-body .description {
