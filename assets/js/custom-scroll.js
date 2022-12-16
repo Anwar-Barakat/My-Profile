@@ -6,7 +6,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal(".home-text p", { delay: 400, origin: "top" });
-ScrollReveal().reveal(".home-text h,.header-top", {
+ScrollReveal().reveal(".home-text h1,.header-top", {
   delay: 400,
   origin: "right",
 });

@@ -54,6 +54,31 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .about-section .container .experience .timeline .timeline-item:nth-child(odd),
+  .about-section .container .education .timeline .timeline-item:nth-child(odd) {
+    padding-left: 80px;
+    padding-right: 10px;
+  }
+  .about-section
+    .container
+    .experience
+    .timeline
+    .timeline-item:nth-child(even),
+  .about-section
+    .container
+    .education
+    .timeline
+    .timeline-item:nth-child(even) {
+    padding-right: 10px;
+    padding-left: 80px;
+  }
+  .about-section .container .experience .timeline::before,
+  .about-section .container .education .timeline::before {
+    left: 30px;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .section-title .box-light .topLayer,
   .section-title .box-light .lightbar {
@@ -149,8 +174,6 @@
     top: initial;
     right: initial;
   }
-  .contact-section .socials {
-  }
 
   section.section.active {
     display: flex;
@@ -165,6 +188,67 @@
   .section-title .box-light {
     width: fit-content;
     height: fit-content;
+  }
+
+  .about-section
+    .container
+    .experience
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    p,
+  .about-section
+    .container
+    .education
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    p,
+  .about-section
+    .container
+    .experience
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    h4,
+  .about-section
+    .container
+    .education
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    h4 {
+    font-size: 13px;
+  }
+  .about-section
+    .container
+    .experience
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    h3,
+  .about-section
+    .container
+    .education
+    .timeline
+    .timeline-item
+    .timeline-item-inner
+    h3 {
+    font-size: 1rem;
+  }
+  .about-section
+    .container
+    .experience
+    .timeline
+    .timeline-item
+    .timeline-item-inner,
+  .about-section
+    .container
+    .education
+    .timeline
+    .timeline-item
+    .timeline-item-inner {
+    padding: 14px;
   }
 
   .custom-btn {
@@ -211,6 +295,13 @@
   .about-section .container .about-image .image-box {
     width: auto;
     height: auto;
+  }
+
+  .portfolio-section .filters {
+    gap: 1rem;
+  }
+  .portfolio-popup .pp-inner .pp-content .pp-header h3 {
+    font-size: 1em;
   }
 
   .about-section
