@@ -197,6 +197,12 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
           animation: fadeOut 1s ease forwards;
 }
 
+section.home-section.active, header .nav .home-section.active.nav-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -423,8 +429,8 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   -webkit-box-shadow: 0 0 10px var(--first-color-second), 0 0 20px var(--first-color-second), 0 0 40px var(--first-color-second), 0 0 80px var(--first-color-second), 0 0 120px var(--first-color-second);
           box-shadow: 0 0 10px var(--first-color-second), 0 0 20px var(--first-color-second), 0 0 40px var(--first-color-second), 0 0 80px var(--first-color-second), 0 0 120px var(--first-color-second);
   z-index: 2;
-  -webkit-animation: animatelightbar 5s linear infinite;
-          animation: animatelightbar 5s linear infinite;
+  -webkit-animation: animatelightbar 2.5s linear infinite;
+          animation: animatelightbar 2.5s linear infinite;
 }
 
 @-webkit-keyframes animatelightbar {
@@ -477,8 +483,8 @@ section.section.fade-out, header .nav .section.fade-out.nav-inner {
   left: 0;
   background: var(--input-color);
   overflow: hidden;
-  -webkit-animation: animateToplayer 10s linear infinite;
-          animation: animateToplayer 10s linear infinite;
+  -webkit-animation: animateToplayer 5s linear infinite;
+          animation: animateToplayer 5s linear infinite;
 }
 
 @-webkit-keyframes animateToplayer {
@@ -703,10 +709,21 @@ video {
 }
 
 .socials li {
-  display: inline-block;
+  background: var(--white-alpha-40);
   width: 38px;
   height: 38px;
-  background: var(--white-alpha-40);
+  background-color: var(--white-alpha-40);
+  border: 1px solid var(--white-alpha-45);
+  border-radius: 10px;
+  -webkit-box-shadow: var(--box-shadow-alt);
+          box-shadow: var(--box-shadow-alt);
+  cursor: pointer;
+}
+
+.socials li a {
+  color: var(--first-color);
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,15 +733,6 @@ video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--white-alpha-40);
-  border: 1px solid var(--white-alpha-45);
-  border-radius: 10px;
-  -webkit-box-shadow: var(--box-shadow-alt);
-          box-shadow: var(--box-shadow-alt);
-}
-
-.socials li a {
-  color: var(--first-color);
 }
 
 .home-section {
@@ -1083,60 +1091,60 @@ header .nav .nav-inner ul li .nav-link::before {
 @-webkit-keyframes headerFadeOut {
   0% {
     opacity: 1;
-    -webkit-transform: translateY(0) scale(1);
-            transform: translateY(0) scale(1);
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
     -webkit-transform-origin: top center;
             transform-origin: top center;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(200px) scale(0.8);
-            transform: translateY(200px) scale(0.8);
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
 @keyframes headerFadeOut {
   0% {
     opacity: 1;
-    -webkit-transform: translateY(0) scale(1);
-            transform: translateY(0) scale(1);
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
     -webkit-transform-origin: top center;
             transform-origin: top center;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(200px) scale(0.8);
-            transform: translateY(200px) scale(0.8);
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
   }
 }
 
 @-webkit-keyframes headerFadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-200px) scale(0.8);
-            transform: translateY(-200px) scale(0.8);
+    -webkit-transform: translateX(-200px) scale(0.8);
+            transform: translateX(-200px) scale(0.8);
     -webkit-transform-origin: top center;
             transform-origin: top center;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
+    -webkit-transform: translateX(0px) scale(1);
+            transform: translateX(0px) scale(1);
   }
 }
 
 @keyframes headerFadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-200px) scale(0.8);
-            transform: translateY(-200px) scale(0.8);
+    -webkit-transform: translateX(-200px) scale(0.8);
+            transform: translateX(-200px) scale(0.8);
     -webkit-transform-origin: top center;
             transform-origin: top center;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
+    -webkit-transform: translateX(0px) scale(1);
+            transform: translateX(0px) scale(1);
   }
 }
 
@@ -1590,34 +1598,6 @@ header .nav .nav-inner ul li .nav-link::before {
   color: var(--first-color);
 }
 
-.skills-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 120px 0;
-}
-
-.skills-section .skills-charts {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1.8fr 1.2fr;
-      grid-template-columns: 1.8fr 1.2fr;
-  gap: 2rem;
-}
-
-.skills-section .skills-charts .frontend-skill,
-.skills-section .skills-charts .backend-skill {
-  padding: 15px;
-  background-color: var(--white-alpha-40);
-  border: var(--white-alpha-45);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .contact-section .auto-grid {
   padding: 1rem;
 }
@@ -1873,18 +1853,18 @@ header .nav .nav-inner ul li .nav-link::before {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .about-section .container .experience .timeline .timeline-item .timeline-item-inner p,
-  .about-section .container .education .timeline .timeline-item .timeline-item-inner p,
-  .about-section .container .experience .timeline .timeline-item .timeline-item-inner h4,
-  .about-section .container .education .timeline .timeline-item .timeline-item-inner h4 {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner p,
+  .about-section .education .timeline .timeline-item .timeline-item-inner p,
+  .about-section .experience .timeline .timeline-item .timeline-item-inner h4,
+  .about-section .education .timeline .timeline-item .timeline-item-inner h4 {
     font-size: 13px;
   }
-  .about-section .container .experience .timeline .timeline-item .timeline-item-inner h3,
-  .about-section .container .education .timeline .timeline-item .timeline-item-inner h3 {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner h3,
+  .about-section .education .timeline .timeline-item .timeline-item-inner h3 {
     font-size: 1rem;
   }
-  .about-section .container .experience .timeline .timeline-item .timeline-item-inner,
-  .about-section .container .education .timeline .timeline-item .timeline-item-inner {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner,
+  .about-section .education .timeline .timeline-item .timeline-item-inner {
     padding: 14px;
   }
   .custom-btn {
@@ -1914,7 +1894,7 @@ header .nav .nav-inner ul li .nav-link::before {
     max-width: 30px;
   }
   .home-section .auto-grid .home-image .image-box,
-  .about-section .container .about-image .image-box {
+  .about-section .about-image .image-box {
     width: auto;
     height: auto;
   }
@@ -1924,7 +1904,7 @@ header .nav .nav-inner ul li .nav-link::before {
   .portfolio-popup .pp-inner .pp-content .pp-header h3 {
     font-size: 1em;
   }
-  .about-section .container .about-text .tab-content .timeline .timeline-item h4 {
+  .about-section .about-text .tab-content .timeline .timeline-item h4 {
     font-size: 1em;
   }
   .about-section .container .about-text .tab-content .timeline .timeline-item {
@@ -1974,7 +1954,7 @@ header .nav .nav-inner ul li .nav-link::before {
   header .nav .nav-inner ul li .nav-link {
     font-size: 1.5em;
   }
-  .about-section .container .about-text p {
+  .about-section .about-text p {
     max-width: 288px;
   }
   .portfolio-section .portfolio-items {
@@ -1998,7 +1978,7 @@ header .nav .nav-inner ul li .nav-link::before {
     font-size: 12px;
     letter-spacing: 0;
   }
-  .about-section .container .about-text p {
+  .about-section .about-text p {
     max-width: 100%;
   }
   .portfolio-section .portfolio-items {

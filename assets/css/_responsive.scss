@@ -190,64 +190,18 @@
     height: fit-content;
   }
 
-  .about-section
-    .container
-    .experience
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    p,
-  .about-section
-    .container
-    .education
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    p,
-  .about-section
-    .container
-    .experience
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    h4,
-  .about-section
-    .container
-    .education
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    h4 {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner p,
+  .about-section .education .timeline .timeline-item .timeline-item-inner p,
+  .about-section .experience .timeline .timeline-item .timeline-item-inner h4,
+  .about-section .education .timeline .timeline-item .timeline-item-inner h4 {
     font-size: 13px;
   }
-  .about-section
-    .container
-    .experience
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    h3,
-  .about-section
-    .container
-    .education
-    .timeline
-    .timeline-item
-    .timeline-item-inner
-    h3 {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner h3,
+  .about-section .education .timeline .timeline-item .timeline-item-inner h3 {
     font-size: 1rem;
   }
-  .about-section
-    .container
-    .experience
-    .timeline
-    .timeline-item
-    .timeline-item-inner,
-  .about-section
-    .container
-    .education
-    .timeline
-    .timeline-item
-    .timeline-item-inner {
+  .about-section .experience .timeline .timeline-item .timeline-item-inner,
+  .about-section .education .timeline .timeline-item .timeline-item-inner {
     padding: 14px;
   }
 
@@ -292,7 +246,7 @@
   }
 
   .home-section .auto-grid .home-image .image-box,
-  .about-section .container .about-image .image-box {
+  .about-section .about-image .image-box {
     width: auto;
     height: auto;
   }
@@ -304,13 +258,7 @@
     font-size: 1em;
   }
 
-  .about-section
-    .container
-    .about-text
-    .tab-content
-    .timeline
-    .timeline-item
-    h4 {
+  .about-section .about-text .tab-content .timeline .timeline-item h4 {
     font-size: 1em;
   }
 
@@ -360,7 +308,7 @@
     font-size: 1.5em;
   }
 
-  .about-section .container .about-text p {
+  .about-section .about-text p {
     max-width: 288px;
   }
 
@@ -387,7 +335,7 @@
     letter-spacing: 0;
   }
 
-  .about-section .container .about-text p {
+  .about-section .about-text p {
     max-width: 100%;
   }
 

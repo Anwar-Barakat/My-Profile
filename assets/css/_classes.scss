@@ -30,6 +30,11 @@ section.section {
     animation: fadeOut 1s ease forwards;
   }
 }
+section.home-section {
+  &.active {
+    display: flex;
+  }
+}
 
 @keyframes fadeOut {
   0% {
@@ -122,7 +127,6 @@ section.section {
     vertical-align: middle;
     transition: width 0.3s ease-in-out;
   }
-
   .icon {
     color: var(--text-color-light);
     transition: color 0.3s ease-in-out;
@@ -132,7 +136,6 @@ section.section {
   &:hover,
   &.active {
     color: white;
-
     .icon {
       color: white;
     }
@@ -154,7 +157,6 @@ section.section {
   max-width: 100%;
   margin-bottom: 2em;
   padding-top: 4em;
-
   h2 {
     display: inline-block;
     font-size: 26px;
@@ -164,7 +166,6 @@ section.section {
     letter-spacing: 2px;
     text-shadow: 0 0 10px var(--first-color-alt);
     text-transform: capitalize;
-
     &::before {
       content: attr(data-heading);
       display: block;
@@ -172,7 +173,6 @@ section.section {
       color: var(--first-color);
     }
   }
-
   .box-light {
     position: relative;
     width: 250px;
@@ -182,7 +182,6 @@ section.section {
     align-items: center;
     margin: auto;
     margin-bottom: 30px;
-
     .lightbar {
       position: absolute;
       left: 0;
@@ -195,7 +194,7 @@ section.section {
         0 0 20px var(--first-color-second), 0 0 40px var(--first-color-second),
         0 0 80px var(--first-color-second), 0 0 120px var(--first-color-second);
       z-index: 2;
-      animation: animatelightbar 5s linear infinite;
+      animation: animatelightbar 2.5s linear infinite;
     }
 
     @keyframes animatelightbar {
@@ -226,7 +225,7 @@ section.section {
       left: 0;
       background: var(--input-color);
       overflow: hidden;
-      animation: animateToplayer 10s linear infinite;
+      animation: animateToplayer 5s linear infinite;
     }
 
     @keyframes animateToplayer {
@@ -383,20 +382,21 @@ video {
   transform: translateY(-50%);
 
   li {
-    display: inline-block;
+    background: var(--white-alpha-40);
     width: 38px;
     height: 38px;
-    background: var(--white-alpha-40);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--white-alpha-40);
     border: 1px solid var(--white-alpha-45);
     border-radius: 10px;
     box-shadow: var(--box-shadow-alt);
-
+    cursor: pointer;
     a {
       color: var(--first-color);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
