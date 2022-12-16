@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     document.querySelector(".loader").classList.add("fade-out");
     window.scrollTo(0, 0);
-  }, 3000);
+  }, 500);
 });
 // ! ===========================
 // ! Toggle Navbar
@@ -160,6 +160,15 @@ function portfolioItemDetails(portfolioItem) {
 
   document.querySelector(".pp-body .general-info").innerHTML =
     portfolioItem.querySelector(".general-info").innerHTML;
+
+  if (portfolioItem.classList.contains("video")) {
+    document
+      .querySelector(".pp-thumbnail .an-video")
+      .classList.remove("d-none");
+    document.querySelector(".pp-thumbnail img").src = "";
+  } else {
+    document.querySelector(".pp-thumbnail .an-video").classList.add("d-none");
+  }
 }
 
 document.querySelector(".pp-close").onclick = togglePortfolioPopup;

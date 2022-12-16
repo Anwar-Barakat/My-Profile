@@ -25,6 +25,9 @@
         font-size: 1em;
         color: var(--text-color-light);
         letter-spacing: 1px;
+        a {
+          color: var(--first-color);
+        }
       }
 
       h3 {

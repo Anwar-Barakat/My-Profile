@@ -1,75 +1,47 @@
 .home-section {
-    display: flex;
-    padding: 120px 0 40px;
-    .auto-grid {
-        @extend .custom-grid;
+  display: flex;
+  padding: 120px 0 40px;
+  .auto-grid {
+    @extend .custom-grid;
 
-        .home-text,
-        .home-image {
-            padding: 15px;
-        }
-
-        .home-text {
-            p {
-                font-size: 1.1em;
-                text-transform: capitalize;
-                color: var(--title-color);
-                line-height: 0.5;
-            }
-
-            h1 {
-                font-size: 3em;
-                text-transform: capitalize;
-                color: var(--first-color);
-            }
-
-            h2 {
-                text-transform: capitalize;
-                font-size: 1.25em;
-                color: var(--title-color);
-                margin-bottom: 1em;
-            }
-
-            .btns {
-                margin-top: 1.5em;
-                display: flex;
-                gap: 0.5em;
-            }
-        }
-
-        .home-image {
-            img {
-                @extend .header-image;
-                box-shadow: var(--main-shadow);
-            }
-        }
+    .home-text,
+    .home-image {
+      padding: 15px;
     }
 
-    .socials {
+    .home-text {
+      p {
+        font-size: 1.1em;
+        text-transform: capitalize;
+        color: var(--title-color);
+        line-height: 0.5;
+      }
+
+      h1 {
+        font-size: 3em;
+        text-transform: capitalize;
+        color: var(--first-color);
+      }
+
+      h2 {
+        text-transform: capitalize;
+        font-size: 1.25em;
+        color: var(--title-color);
+        margin-bottom: 1em;
+      }
+
+      .btns {
+        margin-top: 1.5em;
         display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        position: absolute;
-        top: 50%;
-        right: -19px;
-        transform: translateY(-50%);
-
-        li {
-            display: inline-block;
-            width: 38px;
-            height: 38px;
-            background: var(--white-alpha-40);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--white-alpha-40);
-            border: 1px solid var(--white-alpha-45);
-            border-radius: 10px;
-            box-shadow: var(--box-shadow-alt);
-
-            a {
-                color: var(--first-color);
-            }
-        }
+        gap: 0.5em;
+      }
     }
+
+    .home-image {
+      img {
+        @extend .header-image;
+        box-shadow: var(--main-shadow);
+      }
+    }
+  }
 }
