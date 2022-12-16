@@ -1,9 +1,9 @@
-// window.addEventListener("load", () => {
-//   setTimeout(() => {
-//     document.querySelector(".loader").classList.add("fade-out");
-//     window.scrollTo(0, 0);
-//   }, 500);
-// });
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.querySelector(".loader").classList.add("fade-out");
+    window.scrollTo(0, 0);
+  }, 3000);
+});
 // ! ===========================
 // ! Toggle Navbar
 // ! ===========================
