@@ -192,12 +192,8 @@ section.home-section {
 }
 
 .github-btn {
-  background: var(--text-color);
-  color: white;
-
-  &:hover {
-    background-color: var(--text-color);
-  }
+  background: var(--git-background);
+  color: var(--git-color);
 }
 
 .grid {

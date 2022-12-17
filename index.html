@@ -97,11 +97,7 @@
       <header class="header">
         <div class="container">
           <div class="row space-between zIndex header-top">
-            <a
-              href="https://postimages.org/"
-              target="_blank"
-              class="logo light"
-            >
+            <a href="https://postimages.org/" target="_blank" class="logo">
               <img
                 src="https://i.postimg.cc/QCyRWB1P/IMG-20220826-172957-743-removebg-preview.png"
                 alt="IMG-20220826-172957-743-removebg-preview"
@@ -226,7 +222,7 @@
               <div class="skills">
                 <div class="group">
                   <div class="skill-item">HTML</div>
-                  <div class="skill-item">CSS</div>
+                  <div class="skill-item">SCSS</div>
                   <div class="skill-item">Javascript</div>
                   <div class="skill-item">jQuery</div>
                   <div class="skill-item">AJAX</div>
@@ -372,9 +368,8 @@
                 demo
               </a>
               <a
-                target="_blank"
                 href="https://github.com/Anwar-Barakat/Laravel-School"
-                class="custom-btn view-peoject github-btn"
+                class="custom-btn github-btn"
               >
                 <i class="fab fa-github button__icon"></i> Github
               </a>
@@ -424,12 +419,11 @@
                   demo
                 </a>
                 <a
-                target="_blank"
-                href="https://github.com/Anwar-Barakat/Laravel-School"
-                class="custom-btn view-peoject github-btn"
-              >
-                <i class="fab fa-github button__icon"></i> Github
-              </a>
+                  href="https://github.com/Anwar-Barakat/Laravel-AN-Movies-App"
+                  class="custom-btn github-btn"
+                >
+                  <i class="fab fa-github button__icon"></i> Github
+                </a>
               </div>
               <div class="portfolio-item-details">
                 <div class="description">
@@ -470,6 +464,12 @@
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
               </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Food-Resturant-Template"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
+              </a>
               <div class="portfolio-item-details">
                 <div class="description">
                   This template consists of login, registration and profile. In
@@ -496,7 +496,6 @@
                 </div>
               </div>
             </div>
-
             <div class="portfolio-item filter frontend">
               <div class="portfolio-item-thumbnail">
                 <img
@@ -505,10 +504,17 @@
                   alt="Third Portfolio"
                 />
               </div>
-              <h3 class="portfolio-item-title">Third Portfolio</h3>
+              <h3 class="portfolio-item-title">Splendid Portfolio</h3>
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
               </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Splendid-Responsive-Profile"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
+              </a>
+
               <div class="portfolio-item-details">
                 <div class="description"></div>
                 <div class="general-info">
@@ -543,6 +549,12 @@
               <h3 class="portfolio-item-title">Nike Shoes Shop</h3>
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
+              </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Responsive-Design-of-Nike-Shoes"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
               </a>
               <div class="portfolio-item-details">
                 <div class="description">
@@ -583,6 +595,13 @@
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
               </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Responsive-Nature-Template-Design"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
+              </a>
+
               <div class="portfolio-item-details">
                 <div class="description">
                   In this design, many different sections have been added with
@@ -614,12 +633,18 @@
                 <img
                   loading="lazy"
                   src="assets/images/portfolio/11 Portfolio_2.PNG"
-                  alt="Second Portfolio"
+                  alt="Responsive-Dark-Portfolio"
                 />
               </div>
-              <h3 class="portfolio-item-title">Second Portfolio</h3>
+              <h3 class="portfolio-item-title">Responsive-Dark-Portfolio</h3>
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
+              </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Creative-Responsive-Dark-Portfolio"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
               </a>
               <div class="portfolio-item-details">
                 <div class="description"></div>
@@ -830,6 +855,12 @@
               <a href="javascript:void(0);" class="custom-btn view-peoject">
                 demo
               </a>
+              <a
+                href="https://github.com/Anwar-Barakat/Mobile-Template-1"
+                class="custom-btn github-btn"
+              >
+                <i class="fab fa-github button__icon"></i> Github
+              </a>
               <div class="portfolio-item-details">
                 <div class="description"></div>
                 <div class="general-info">
@@ -1003,15 +1034,19 @@
               </div>
             </div>
             <div class="contact__content">
-              <label for="project" class="contact__label">Project</label>
-              <input type="text" id="project" class="contact__input" />
+              <label for="subject" class="contact__label">Subject</label>
+              <input type="text" id="subject" class="contact__input" />
             </div>
             <div class="contact__content">
               <label for="message" class="contact__label">Message</label>
               <textarea id="message" rows="7" class="contact__input"></textarea>
             </div>
             <div class="contact__button">
-              <a href="" class="custom-btn custom-btn-padding">
+              <a
+                href="javascript:;"
+                class="custom-btn custom-btn-padding"
+                id="sendMsg"
+              >
                 <i class="uil uil-envelope-upload button__icon"></i>
                 Send Message
               </a>
@@ -1022,7 +1057,7 @@
               <i class="icon fas fa-envelope"></i>
               <div>
                 <h3>E-mail</h3>
-                <a href="javascript:void(0)">brkatanwar0@gmail.com</a>
+                <a href="mailto:brkatanwar0@gmail.com">brkatanwar0@gmail.com</a>
               </div>
             </div>
             <div class="contact-info-item">
@@ -1032,6 +1067,7 @@
                 <a href="">Damascus - <span>Syria</span></a>
               </div>
             </div>
+            <img src="assets/images/contact/message.svg" alt="" />
           </div>
         </div>
       </section>
@@ -1090,6 +1126,10 @@
     <!-- scroll reveal cdn -->
     <!-- <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/custom-scroll.js"></script> -->
+
+    <!-- smtp cdn -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/js/send-mail.js"></script>
 
     <!-- custom js -->
     <script src="assets/js/main.js"></script>

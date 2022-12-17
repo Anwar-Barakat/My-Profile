@@ -4,172 +4,174 @@
 //? Varibles CSS
 //? ===========================
 :root {
-    //****************** Colors ******************
-    --hue-color: 340;
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 35%);
-    --text-color-light: hsl(var(--hue-color), 8%, 50%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --body-color-transparent: hsl(230deg 60% 99% / 20%);
+  //****************** Colors ******************
+  --hue-color: 210;
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 35%);
+  --text-color-light: hsl(var(--hue-color), 8%, 50%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color-transparent: hsl(230deg 60% 99% / 20%);
 
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --git-background: hsl(var(--hue-color), 8%, 35%);
+  --git-color: hsl(var(--hue-color), 60%, 99%);
 
-    --white-alpha-45: rgba(255, 255, 255, 0.45);
-    --white-alpha-40: rgba(255, 255, 255, 0.4);
-    --backdrop-filter-blur: blur(5px);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-    --loading: hsl(var(--hue-color), 92%, 85%);
+  --white-alpha-45: rgba(255, 255, 255, 0.45);
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --backdrop-filter-blur: blur(5px);
 
-    //****************** Colors ******************
+  --loading: hsl(var(--hue-color), 92%, 85%);
 
-    //****************** Fonts ******************
-    --body-font: "Cairo", sans-serif;
-    --bigger-font-size: 3.5em;
-    --big-font-size: 2em;
-    --h1-font-size: 1.5em;
-    --h2-font-size: 1.25em;
-    --h3-font-size: 1.125em;
-    --normal-font-size: 0.938em;
-    --small-font-size: 0.813em;
-    --smaller-font-size: 0.75em;
-    //****************** Fonts ******************
+  //****************** Colors ******************
 
-    //*************** Box Shadow ****************
-    --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    --box-shadow-alt: #0000001a 0px 1px 3px 0px;
+  //****************** Fonts ******************
+  --body-font: "Cairo", sans-serif;
+  --bigger-font-size: 3.5em;
+  --big-font-size: 2em;
+  --h1-font-size: 1.5em;
+  --h2-font-size: 1.25em;
+  --h3-font-size: 1.125em;
+  --normal-font-size: 0.938em;
+  --small-font-size: 0.813em;
+  --smaller-font-size: 0.75em;
+  //****************** Fonts ******************
 
-    --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
-        rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
-        rgb(0 0 0 / 1%) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgb(0 0 0 / 1%) 0px 4px 2px,
-        rgb(0 0 0 / 1%) 0px 8px 4px, rgb(0 0 0 / 2%) 0px 16px 8px,
-        rgb(0 0 0 / 2%) 0px 32px 16px;
+  //*************** Box Shadow ****************
+  --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  --box-shadow-alt: #0000001a 0px 1px 3px 0px;
+
+  --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
+    rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
+    rgb(0 0 0 / 1%) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgb(0 0 0 / 1%) 0px 4px 2px, rgb(0 0 0 / 1%) 0px 8px 4px,
+    rgb(0 0 0 / 2%) 0px 16px 8px, rgb(0 0 0 / 2%) 0px 32px 16px;
 }
 
 //? ===========================
 //? Global Settings
 //? ===========================
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    overflow-x: hidden;
-    -webkit-tap-highlight-color: transparent;
-    padding: 35px;
-    background-attachment: fixed;
-    &::before {
-        position: fixed;
-        content: "";
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--first-color-alt);
-        opacity: 0.14;
-        z-index: -1;
-    }
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  padding: 35px;
+  background-attachment: fixed;
+  &::before {
+    position: fixed;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--first-color-alt);
+    opacity: 0.14;
+    z-index: -1;
+  }
 
-    &.hide-scrolling {
-        overflow-y: hidden;
-    }
+  &.hide-scrolling {
+    overflow-y: hidden;
+  }
 
-    &.dark-theme {
-        //****************** Colors ******************
-        --first-color-second: hsl(var(--hue-color), 30%, 8%);
-        --title-color: hsl(var(--hue-color), 8%, 95%);
-        --text-color: hsl(var(--hue-color), 8%, 75%);
-        --input-color: hsl(var(--hue-color), 20%, 18%);
-        --body-color: #121212;
-        --container-color: hsl(var(--hue-color), 29%, 16%);
-        --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-        --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-        //****************** Colors ******************
-        --box-shadow: 0 -2px 10px rgb(0 0 0);
-        --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
-            0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
+  &.dark-theme {
+    //****************** Colors ******************
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 20%, 18%);
+    --body-color: #121212;
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 
-        --white-alpha-45: rgba(255, 255, 255, 0.2);
-        --white-alpha-40: rgba(255, 255, 255, 0.05);
-        --backdrop-filter-blur: blur(0);
+    //****************** Colors ******************
+    --box-shadow: 0 -2px 10px rgb(0 0 0);
+    --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
+      0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
 
-        --loading: hsl(230deg 60% 99% / 20%);
+    --white-alpha-45: rgba(255, 255, 255, 0.2);
+    --white-alpha-40: rgba(255, 255, 255, 0.05);
+    --backdrop-filter-blur: blur(0);
 
-        --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
-            rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
-            rgb(0 0 0 / 1%) 0px -79px 40px 0px inset,
-            rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-            rgb(0 0 0 / 1%) 0px 8px 4px, rgb(0 0 0 / 2%) 0px 16px 8px,
-            rgb(0 0 0 / 2%) 0px 32px 16px;
-    }
+    --loading: hsl(230deg 60% 99% / 20%);
+
+    --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
+      rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
+      rgb(0 0 0 / 1%) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgb(0 0 0 / 1%) 0px 8px 4px,
+      rgb(0 0 0 / 2%) 0px 16px 8px, rgb(0 0 0 / 2%) 0px 32px 16px;
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 h1,
 h2 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 h3,
 h4,
 h5 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 ::-webkit-scrollbar {
-    width: 0.3em;
-    background-color: var(--input-color);
+  width: 0.3em;
+  background-color: var(--input-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--first-color);
-    border-radius: 0.5em;
-    transition: var(--main-transition);
+  background-color: var(--first-color);
+  border-radius: 0.5em;
+  transition: var(--main-transition);
 
-    &:hover {
-        background-color: var(--text-color-light);
-    }
+  &:hover {
+    background-color: var(--text-color-light);
+  }
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--first-color-lighter);
+  background-color: var(--first-color-lighter);
 }
 
 //? ===========================

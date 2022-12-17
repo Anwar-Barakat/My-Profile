@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap");
 :root {
-  --hue-color: 340;
+  --hue-color: 210;
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -11,6 +11,8 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --body-color-transparent: hsl(230deg 60% 99% / 20%);
+  --git-background: hsl(var(--hue-color), 8%, 35%);
+  --git-color: hsl(var(--hue-color), 60%, 99%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --white-alpha-45: rgba(255, 255, 255, 0.45);
@@ -29,11 +31,10 @@
   --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   --box-shadow-alt: #0000001a 0px 1px 3px 0px;
   --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
-        rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
-        rgb(0 0 0 / 1%) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgb(0 0 0 / 1%) 0px 4px 2px,
-        rgb(0 0 0 / 1%) 0px 8px 4px, rgb(0 0 0 / 2%) 0px 16px 8px,
-        rgb(0 0 0 / 2%) 0px 32px 16px;
+    rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
+    rgb(0 0 0 / 1%) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgb(0 0 0 / 1%) 0px 4px 2px, rgb(0 0 0 / 1%) 0px 8px 4px,
+    rgb(0 0 0 / 2%) 0px 16px 8px, rgb(0 0 0 / 2%) 0px 32px 16px;
 }
 
 * {
@@ -84,17 +85,16 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   --box-shadow: 0 -2px 10px rgb(0 0 0);
   --box-shadow-alt: 0px 1px 1px 0px rgb(0 0 0 / 14%),
-            0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
+      0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
   --white-alpha-45: rgba(255, 255, 255, 0.2);
   --white-alpha-40: rgba(255, 255, 255, 0.05);
   --backdrop-filter-blur: blur(0);
   --loading: hsl(230deg 60% 99% / 20%);
   --main-shadow: rgb(0 0 0 / 3%) 0px -23px 25px 0px inset,
-            rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
-            rgb(0 0 0 / 1%) 0px -79px 40px 0px inset,
-            rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-            rgb(0 0 0 / 1%) 0px 8px 4px, rgb(0 0 0 / 2%) 0px 16px 8px,
-            rgb(0 0 0 / 2%) 0px 32px 16px;
+      rgb(0 0 0 / 5%) 0px -36px 30px 0px inset,
+      rgb(0 0 0 / 1%) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgb(0 0 0 / 1%) 0px 8px 4px,
+      rgb(0 0 0 / 2%) 0px 16px 8px, rgb(0 0 0 / 2%) 0px 32px 16px;
 }
 
 ul {
@@ -435,12 +435,8 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
 }
 
 .github-btn {
-  background: var(--text-color);
-  color: white;
-}
-
-.github-btn:hover {
-  background-color: var(--text-color);
+  background: var(--git-background);
+  color: var(--git-color);
 }
 
 .grid {
@@ -985,6 +981,11 @@ header.active .nav {
 
 header .logo {
   max-width: 40px;
+}
+
+header .logo img.dark {
+  -webkit-filter: invert(100%) sepia(100%) hue-rotate(-180deg) saturate(3);
+          filter: invert(100%) sepia(100%) hue-rotate(-180deg) saturate(3);
 }
 
 header .nav-toggle {
@@ -1706,11 +1707,17 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 .contact-section .auto-grid .contact-info .contact-info-item a {
-  color: var(--title-color);
+  color: var(--text-color-light);
 }
 
 .contact-section .auto-grid .contact-info .contact-info-item a:visited, .contact-section .auto-grid .contact-info .contact-info-item a:focus {
-  color: var(--text-color-light);
+  color: var(--text-color);
+}
+
+.contact-section .auto-grid .contact-info img {
+  max-width: 380px;
+  width: 100%;
+  margin: auto;
 }
 
 @media screen and (max-width: 991px) {
