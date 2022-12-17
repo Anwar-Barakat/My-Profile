@@ -74,6 +74,10 @@
 }
 
 @media screen and (max-width: 750px) {
+  .effects {
+    display: none;
+  }
+
   .section-title .box-light .topLayer,
   .section-title .box-light .lightbar {
     display: none;
@@ -82,26 +86,31 @@
   .portfolio-popup .pp-inner {
     padding: 40px;
   }
+
   .about-section {
     .education {
       .timeline {
         &::before {
           left: 26px;
         }
+
         .timeline-item {
           &:nth-child(even) {
             padding-left: 15px;
             text-align: left;
             padding-left: 75px;
+
             .icon {
               left: -70px;
             }
           }
+
           &:nth-child(odd) {
             padding-right: 15px;
             text-align: right;
             padding-left: 75px;
           }
+
           .timeline-item-inner {
             &::before {
               left: -30px;
@@ -111,25 +120,30 @@
         }
       }
     }
+
     .experience {
       .timeline {
         &::before {
           left: 26px;
         }
+
         .timeline-item {
           &:nth-child(even) {
             padding-right: 10px !important;
             text-align: left;
             padding-left: 75px;
+
             .icon {
               left: -70px;
             }
           }
+
           &:nth-child(odd) {
             padding-right: 15px;
             text-align: right;
             padding-left: 75px;
           }
+
           .timeline-item-inner {
             &::before {
               left: -30px;
@@ -160,6 +174,7 @@
   .xm-font-13 {
     font-size: 13px !important;
   }
+
   .xm-font-16 {
     font-size: 1rem !important;
   }
