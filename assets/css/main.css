@@ -263,10 +263,6 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   }
 }
 
-.hidden {
-  display: none !important;
-}
-
 .main {
   max-width: 1200px;
   margin: auto;
@@ -284,6 +280,49 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
           transform: translateY(100px);
 }
 
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.socials li {
+  background: var(--white-alpha-40);
+  width: 38px;
+  height: 38px;
+  background-color: var(--white-alpha-40);
+  border: 1px solid var(--white-alpha-45);
+  border-radius: 10px;
+  -webkit-box-shadow: var(--box-shadow-alt);
+          box-shadow: var(--box-shadow-alt);
+  cursor: pointer;
+}
+
+.socials li a {
+  color: var(--first-color);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container {
   padding: 0 40px;
   width: 100%;
@@ -295,6 +334,20 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gap-half {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
 }
 
 .align-items-center {
@@ -312,9 +365,10 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
           align-items: center;
 }
 
-.custom-btn {
+.custom-btn,
+.github-btn {
   padding: 4px 10px;
-  color: var(--text-color-light);
+  color: var(--first-color);
   font-size: 1em;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -331,9 +385,11 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   display: inline-block;
   -webkit-box-shadow: var(--box-shadow-alt);
           box-shadow: var(--box-shadow-alt);
+  margin-right: 0.2em;
 }
 
-.custom-btn::before {
+.custom-btn::before,
+.github-btn::before {
   position: absolute;
   content: "";
   width: 0%;
@@ -348,23 +404,43 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   transition: width 0.3s ease-in-out;
 }
 
-.custom-btn .icon {
-  color: var(--text-color-light);
+.custom-btn .icon,
+.github-btn .icon {
+  color: var(--first-color);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   margin-right: 0.2em;
 }
 
-.custom-btn:hover, .custom-btn.active {
+.custom-btn:hover, .custom-btn.active,
+.github-btn:hover,
+.github-btn.active {
   color: white;
 }
 
-.custom-btn:hover .icon, .custom-btn.active .icon {
+.custom-btn:hover .icon, .custom-btn.active .icon,
+.github-btn:hover .icon,
+.github-btn.active .icon {
   color: white;
 }
 
-.custom-btn:hover::before, .custom-btn.active::before {
+.custom-btn:hover::before, .custom-btn.active::before,
+.github-btn:hover::before,
+.github-btn.active::before {
   width: 100%;
+}
+
+.custom-btn-padding {
+  padding: 7px 15px;
+}
+
+.github-btn {
+  background: var(--text-color);
+  color: white;
+}
+
+.github-btn:hover {
+  background-color: var(--text-color);
 }
 
 .grid {
@@ -677,10 +753,6 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   display: table-header-group;
 }
 
-.custom-btn-padding {
-  padding: 7px 15px;
-}
-
 video {
   max-width: 100%;
   border-radius: 1rem;
@@ -692,47 +764,8 @@ video {
   display: none;
 }
 
-.socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.5rem;
-  position: absolute;
-  top: 50%;
-  right: -19px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.socials li {
-  background: var(--white-alpha-40);
-  width: 38px;
-  height: 38px;
-  background-color: var(--white-alpha-40);
-  border: 1px solid var(--white-alpha-45);
-  border-radius: 10px;
-  -webkit-box-shadow: var(--box-shadow-alt);
-          box-shadow: var(--box-shadow-alt);
-  cursor: pointer;
-}
-
-.socials li a {
-  color: var(--first-color);
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.hidden {
+  display: none !important;
 }
 
 .home-section {
@@ -1446,8 +1479,8 @@ header .nav .nav-inner ul li .nav-link::before {
 .portfolio-section .portfolio-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(363px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(363px, 1fr));
   gap: 2em 1.5em;
   padding: 0 2em;
   width: 100%;
@@ -1464,7 +1497,6 @@ header .nav .nav-inner ul li .nav-link::before {
   -webkit-box-shadow: var(--box-shadow-alt);
           box-shadow: var(--box-shadow-alt);
   border-radius: 10px;
-  max-height: 157px;
 }
 
 .portfolio-section .portfolio-items .portfolio-item .portfolio-item-thumbnail img {
@@ -1578,6 +1610,10 @@ header .nav .nav-inner ul li .nav-link::before {
   color: var(--text-color-light);
   margin-bottom: 1em;
   line-height: 1.8;
+}
+
+.portfolio-popup .pp-inner .pp-content .pp-body .description a {
+  color: var(--first-color);
 }
 
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info li {
@@ -1745,8 +1781,8 @@ header .nav .nav-inner ul li .nav-link::before {
     padding-left: 80px;
     padding-right: 10px;
   }
-  .about-section .container .experience .timeline .timeline-item:nth-child(even),
-  .about-section .container .education .timeline .timeline-item:nth-child(even) {
+  .about-section .experience .timeline .timeline-item:nth-child(even),
+  .about-section .education .timeline .timeline-item:nth-child(even) {
     padding-right: 10px;
     padding-left: 80px;
   }
@@ -1764,44 +1800,45 @@ header .nav .nav-inner ul li .nav-link::before {
   .portfolio-popup .pp-inner {
     padding: 40px;
   }
-  .about-section .experience .timeline .timeline-item:nth-child(odd) {
-    padding-left: 15px;
-    text-align: left;
-    padding-left: 75px;
-  }
-  .about-section .education .timeline .timeline-item:nth-child(odd) {
-    padding-right: 15px;
-    text-align: right;
-    padding-left: 75px;
-  }
-  .about-section .experience .timeline .timeline-item:nth-child(even) {
-    padding-right: 15px;
-    text-align: right;
-    padding-left: 75px;
+  .about-section .education .timeline::before {
+    left: 26px;
   }
   .about-section .education .timeline .timeline-item:nth-child(even) {
     padding-left: 15px;
     text-align: left;
     padding-left: 75px;
   }
-  .about-section .experience .timeline::before,
-  .about-section .education .timeline::before {
-    left: 26px;
-  }
-  .about-section .experience .timeline .timeline-item:nth-child(even) .timeline-item-inner::before,
-  .about-section .education .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
-    left: -31px;
-    right: auto;
-  }
-  .about-section .experience .timeline .timeline-item:nth-child(even) .icon,
   .about-section .education .timeline .timeline-item:nth-child(even) .icon {
     left: -70px;
   }
-  .about-section .education .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before {
-    left: -30px;
+  .about-section .education .timeline .timeline-item:nth-child(odd) {
+    padding-right: 15px;
+    text-align: right;
+    padding-left: 75px;
   }
-  .about-section .education .timeline .timeline-item:nth-child(odd) .icon {
+  .about-section .education .timeline .timeline-item .timeline-item-inner::before {
+    left: -30px;
+    right: auto;
+  }
+  .about-section .experience .timeline::before {
+    left: 26px;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(even) {
+    padding-right: 10px !important;
+    text-align: left;
+    padding-left: 75px;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(even) .icon {
     left: -70px;
+  }
+  .about-section .experience .timeline .timeline-item:nth-child(odd) {
+    padding-right: 15px;
+    text-align: right;
+    padding-left: 75px;
+  }
+  .about-section .experience .timeline .timeline-item .timeline-item-inner::before {
+    left: -30px;
+    right: auto;
   }
   .about-section .experience .timeline .timeline-item,
   .about-section .education .timeline .timeline-item {
@@ -1816,6 +1853,12 @@ header .nav .nav-inner ul li .nav-link::before {
 @media screen and (max-width: 551px) {
   body {
     padding: 0.5rem;
+  }
+  .xm-font-13 {
+    font-size: 13px !important;
+  }
+  .xm-font-16 {
+    font-size: 1rem !important;
   }
   .home-section .socials,
   .contact-section .socials {
@@ -1853,16 +1896,6 @@ header .nav .nav-inner ul li .nav-link::before {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .about-section .experience .timeline .timeline-item .timeline-item-inner p,
-  .about-section .education .timeline .timeline-item .timeline-item-inner p,
-  .about-section .experience .timeline .timeline-item .timeline-item-inner h4,
-  .about-section .education .timeline .timeline-item .timeline-item-inner h4 {
-    font-size: 13px;
-  }
-  .about-section .experience .timeline .timeline-item .timeline-item-inner h3,
-  .about-section .education .timeline .timeline-item .timeline-item-inner h3 {
-    font-size: 1rem;
-  }
   .about-section .experience .timeline .timeline-item .timeline-item-inner,
   .about-section .education .timeline .timeline-item .timeline-item-inner {
     padding: 14px;
@@ -1897,12 +1930,6 @@ header .nav .nav-inner ul li .nav-link::before {
   .about-section .about-image .image-box {
     width: auto;
     height: auto;
-  }
-  .portfolio-section .filters {
-    gap: 1rem;
-  }
-  .portfolio-popup .pp-inner .pp-content .pp-header h3 {
-    font-size: 1em;
   }
   .about-section .about-text .tab-content .timeline .timeline-item h4 {
     font-size: 1em;
