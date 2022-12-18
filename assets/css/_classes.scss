@@ -253,7 +253,7 @@ section.home-section {
         0 0 20px var(--first-color-second), 0 0 40px var(--first-color-second),
         0 0 80px var(--first-color-second), 0 0 120px var(--first-color-second);
       z-index: 2;
-      animation: animatelightbar 2.5s linear infinite;
+      animation: animatelightbar 4s linear infinite;
     }
 
     @keyframes animatelightbar {
@@ -284,7 +284,7 @@ section.home-section {
       left: 0;
       background: var(--input-color);
       overflow: hidden;
-      animation: animateToplayer 5s linear infinite;
+      animation: animateToplayer 8s linear infinite;
     }
 
     @keyframes animateToplayer {
@@ -402,7 +402,7 @@ section.home-section {
 .effects {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   transform-style: preserve-3d;
@@ -421,7 +421,7 @@ section.home-section {
       width: 100px;
       height: 100px;
       left: 10%;
-      top: 30%;
+      top: 40%;
       animation-delay: 0s;
     }
 

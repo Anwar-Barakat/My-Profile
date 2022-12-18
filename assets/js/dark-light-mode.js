@@ -3,6 +3,7 @@ const themeButton = document.getElementById("theme-btn"),
   darkTheme = "dark-theme",
   iconTheme = "uil-sun",
   selectedTheme = localStorage.getItem("selected-theme"),
+  darkText = document.querySelector(".mode-text"),
   selectedIcon = localStorage.getItem("selected-icon");
 
 const logo = document.querySelector(".logo img");
@@ -24,6 +25,10 @@ document.body.classList.contains("dark-theme")
   ? logo.classList.add("dark")
   : logo.classList.remove("dark");
 
+document.body.classList.contains("dark-theme")
+  ? (darkText.innerHTML = "Dark Mode")
+  : (darkText.innerHTML = "Light Mode");
+
 themeButton.addEventListener("click", () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
@@ -32,5 +37,9 @@ themeButton.addEventListener("click", () => {
   document.body.classList.contains("dark-theme")
     ? logo.classList.add("dark")
     : logo.classList.remove("dark");
+
+  document.body.classList.contains("dark-theme")
+    ? (darkText.innerHTML = "Dark Mode")
+    : (darkText.innerHTML = "Light Mode");
 });
 //? =========================== Dark/Light Mode  =========================
