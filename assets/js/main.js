@@ -175,3 +175,11 @@ document.querySelector(".pp-close").onclick = togglePortfolioPopup;
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pp-inner")) togglePortfolioPopup();
 });
+
+// Skeleton Script
+skeletons = document.querySelectorAll(".skeleton");
+window.addEventListener("load", () => {
+  skeletons.forEach((item) => {
+    item.classList.remove("skeleton");
+  });
+});
