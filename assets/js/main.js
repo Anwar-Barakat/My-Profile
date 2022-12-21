@@ -4,9 +4,9 @@ window.addEventListener("load", () => {
     window.scrollTo(0, 0);
   }, 3000);
 });
-// ! ===========================
+// ! _______________________
 // ! Toggle Navbar
-// ! ===========================
+// ! _______________________
 const navToggle = document.querySelector(".nav-toggle");
 navToggle.addEventListener("click", (e) => {
   e.preventDefault();
@@ -23,9 +23,9 @@ function toggleNavbar() {
   document.querySelector("header.header").classList.toggle("active");
 }
 
-// ! ===========================
+// ! _______________________
 // ! Active Section
-// ! ===========================
+// ! _______________________
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav-link") && e.target.hash != "") {
     document.querySelector(".overlay-effect").classList.add("active");
@@ -53,9 +53,9 @@ function toggleOverlayEffect() {
   document.querySelector(".overlay-effect").classList.toggle("active");
 }
 
-// ! ===========================
+// ! _______________________
 // ! Change Website Color
-// ! ===========================
+// ! _______________________
 let toggleBtn = document.querySelector(".setting-icon"),
   colorContainer = document.querySelector(".nav__color");
 
@@ -107,9 +107,9 @@ function changeColor() {
   document.documentElement.style.setProperty("--hue-color", color);
 }
 
-// ! ===========================
+// ! _______________________
 // ! Change About Tab
-// ! ===========================
+// ! _______________________
 const tabsContainer = document.querySelector(".about-tabs"),
   aboutSection = document.querySelector(".about-section");
 
@@ -130,9 +130,9 @@ tabsContainer.addEventListener("click", (e) => {
   }
 });
 
-// ! ===========================
-// ! Portfolio Popup
-// ! ===========================
+// ? _______________________
+// ? Portfolio Popup
+// ? _______________________
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-peoject")) {
     togglePortfolioPopup();
@@ -171,12 +171,15 @@ function portfolioItemDetails(portfolioItem) {
 
 document.querySelector(".pp-close").onclick = togglePortfolioPopup;
 
+
 // hide popup when clicking out of it:
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pp-inner")) togglePortfolioPopup();
 });
 
-// Skeleton Script
+//?_______________________
+//? Skeleton Script
+//?_______________________
 skeletons = document.querySelectorAll(".skeleton");
 window.addEventListener("load", () => {
   skeletons.forEach((item) => {

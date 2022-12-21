@@ -20,23 +20,27 @@
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(363px, 1fr));
-    gap: 2em 1.5em;
+    gap: 2em;
     padding: 0 2em;
     width: 100%;
+
     .portfolio-item {
       padding: 10px;
       background: var(--white-alpha-40);
       border: 1px solid var(--white-alpha-45);
       border-radius: 10px;
+
       .portfolio-item-thumbnail {
         box-shadow: var(--box-shadow-alt);
         border-radius: 10px;
         height: auto;
+
         img {
           width: 100%;
           border-radius: 10px;
           box-shadow: var(--box-shadow-alt);
           transition: 0.3s ease-in-out;
+
           &:hover {
             transform: translateY(-20px);
           }
@@ -129,6 +133,7 @@
           color: var(--text-color-light);
           margin-bottom: 1em;
           line-height: 1.8;
+
           a {
             color: var(--first-color);
           }

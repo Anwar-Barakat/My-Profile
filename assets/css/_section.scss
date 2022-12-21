@@ -1,0 +1,77 @@
+//? _______________________
+//? Main Class
+//? _______________________
+.main {
+  max-width: 1200px;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+
+  &.fade-out {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+//? _______________________
+//? Section Class
+//? _______________________
+section {
+  background-color: var(--white-alpha-40);
+  border: 1px solid var(--white-alpha-45);
+  min-height: calc(100vh - 70px);
+  border-radius: 10px;
+  padding: 50px 0 0px;
+  box-shadow: var(--box-shadow-alt);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  backdrop-filter: var(--backdrop-filter-blur);
+}
+
+section.section {
+  display: none;
+
+  &.active {
+    display: block;
+    animation: fadeIn 1s ease forwards;
+    position: relative;
+  }
+
+  &.fade-out {
+    animation: fadeOut 1s ease forwards;
+  }
+}
+
+section.home-section {
+  &.active {
+    display: flex;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(200px) scale(0.8);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200px) scale(0.8);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
