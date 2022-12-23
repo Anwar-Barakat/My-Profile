@@ -1299,8 +1299,6 @@ header .nav .nav-inner ul li .nav-link::before {
 
 .about-section .container .about-image .image-box:hover .content img {
   opacity: 0;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
 }
 
 @-webkit-keyframes animate {
