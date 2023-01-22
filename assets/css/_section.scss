@@ -8,7 +8,7 @@
   opacity: 1;
   transform: translateY(0);
   position: relative;
-
+  overflow-x: hidden;
   &.fade-out {
     opacity: 0;
     transform: translateY(100px);

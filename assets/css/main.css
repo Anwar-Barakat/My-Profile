@@ -161,6 +161,7 @@ textarea {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   position: relative;
+  overflow-x: hidden;
 }
 
 .main.fade-out {
@@ -1482,6 +1483,32 @@ header .nav .nav-inner ul li .nav-link::before {
   display: block;
   -webkit-animation: fadeInOut 0.3s ease-in-out;
           animation: fadeInOut 0.3s ease-in-out;
+}
+
+@-webkit-keyframes fadeInOut {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .about-section .container .experience,

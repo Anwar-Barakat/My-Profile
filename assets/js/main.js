@@ -157,20 +157,12 @@ function portfolioItemDetails(portfolioItem) {
   document.querySelector(".pp-body .general-info").innerHTML =
     portfolioItem.querySelector(".general-info").innerHTML;
 
-  if (portfolioItem.classList.contains("video")) {
-    document
-      .querySelector(".pp-thumbnail .an-video")
-      .classList.remove("d-none");
-    document.querySelector(".pp-thumbnail img").src = "";
-  } else {
-    document.querySelector(".pp-thumbnail .an-video").classList.add("d-none");
-    document.querySelector(".pp-thumbnail img").src =
-      portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
-  }
+  document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(
+    ".portfolio-item-thumbnail img"
+  ).src;
 }
 
 document.querySelector(".pp-close").onclick = togglePortfolioPopup;
-
 
 // hide popup when clicking out of it:
 document.addEventListener("click", (e) => {
