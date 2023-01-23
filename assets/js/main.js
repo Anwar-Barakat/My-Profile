@@ -1,9 +1,9 @@
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.querySelector(".loader").classList.add("fade-out");
-    window.scrollTo(0, 0);
-  }, 3000);
-});
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     document.querySelector(".loader").classList.add("fade-out");
+//     window.scrollTo(0, 0);
+//   }, 1500);
+// });
 // ! _______________________
 // ! Toggle Navbar
 // ! _______________________
@@ -160,6 +160,9 @@ function portfolioItemDetails(portfolioItem) {
   document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(
     ".portfolio-item-thumbnail img"
   ).src;
+  document.querySelector(".pp-thumbnail img").alt = portfolioItem.querySelector(
+    ".portfolio-item-thumbnail img"
+  ).alt;
 }
 
 document.querySelector(".pp-close").onclick = togglePortfolioPopup;

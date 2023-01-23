@@ -54,12 +54,11 @@
 //?______________________
 .socials {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
   position: absolute;
-  top: 50%;
-  right: -19px;
-  transform: translateY(-50%);
+  bottom: 1rem;
+  left: 1rem;
 
   li {
     background: var(--white-alpha-40);

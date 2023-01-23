@@ -55,6 +55,22 @@
   .section-title {
     transform: scale(0.9);
   }
+  section.home-section.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .home-section .socials,
+  .contact-section .socials {
+    justify-content: center;
+    position: initial;
+    flex-direction: initial;
+    transform: initial;
+    top: initial;
+    right: initial;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -199,16 +215,6 @@
     height: fit-content;
   }
 
-  .home-section .socials,
-  .contact-section .socials {
-    justify-content: center;
-    position: initial;
-    flex-direction: initial;
-    transform: initial;
-    top: initial;
-    right: initial;
-  }
-
   .home-section {
     .home-text {
       h1 {
@@ -219,6 +225,9 @@
         font-size: 0.9em;
       }
     }
+  }
+  .home-section .auto-grid .home-image {
+    max-width: 70vw;
   }
 
   .about-section .container .about-image .image-box {
