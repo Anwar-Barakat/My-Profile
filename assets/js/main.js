@@ -157,9 +157,12 @@ function portfolioItemDetails(portfolioItem) {
   document.querySelector(".pp-body .general-info").innerHTML =
     portfolioItem.querySelector(".general-info").innerHTML;
 
-  document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(
-    ".portfolio-item-thumbnail img"
-  ).src;
+  document.querySelector(".pp-thumbnail img").src =
+    "assets/images/gallery/popup/" +
+    portfolioItem
+      .querySelector(".portfolio-item-thumbnail img")
+      .getAttribute("data-popup");
+
   document.querySelector(".pp-thumbnail img").alt = portfolioItem.querySelector(
     ".portfolio-item-thumbnail img"
   ).alt;
