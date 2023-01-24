@@ -59,22 +59,7 @@ function toggleOverlayEffect() {
 let toggleBtn = document.querySelector(".setting-icon"),
   colorContainer = document.querySelector(".nav__color");
 
-toggleBtn.addEventListener("click", (e) => {
-  if (
-    e.target.classList.contains("setting-icon") ||
-    e.target.classList.contains("fa-spin")
-  )
-    colorContainer.classList.toggle("active");
-  else if (
-    !e.target.classList.contains("nav__colors") ||
-    !e.target.classList.contains("colors") ||
-    !e.target.classList.contains("change-color")
-  ) {
-    colorContainer.classList.remove("active");
-  }
-});
-
-var colors = document.getElementsByClassName("change-color");
+let colors = document.querySelectorAll(".colors-theme-list li");
 for (i = 0; i < colors.length; i++) {
   colors[i].onclick = changeColor;
 }
@@ -97,13 +82,10 @@ if (selectedColor) {
   document.documentElement.style.setProperty("--hue-color", selectedColor);
 }
 
-var style = getComputedStyle(document.body).getPropertyValue("--hue-color");
-
 function changeColor() {
   var color = this.getAttribute("data-color");
-  var style = getComputedStyle(document.body).getPropertyValue("--hue-color");
 
-  localStorage.setItem("selected-color", style);
+  localStorage.setItem("selected-color", color);
   document.documentElement.style.setProperty("--hue-color", color);
 }
 

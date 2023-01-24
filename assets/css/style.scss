@@ -3,7 +3,7 @@
 //? _______________________
 :root {
   //****************** Colors ******************
-  --hue-color: 210;
+  --hue-color: 203;
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -132,7 +132,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 textarea {
