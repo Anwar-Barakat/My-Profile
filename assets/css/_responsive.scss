@@ -2,6 +2,7 @@
   .midium-display-none {
     display: none;
   }
+
   .container {
     padding: 0;
   }
@@ -55,13 +56,13 @@
   .section-title {
     transform: scale(0.9);
   }
+
   section.home-section.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
+
   .home-section .socials,
   .contact-section .socials {
     justify-content: center;
@@ -81,11 +82,14 @@
           &::before {
             left: 25px;
           }
+
           .timeline-item {
             margin-bottom: 40px;
+
             &:last-child {
               margin-bottom: 0;
             }
+
             &:nth-child(even) {
               padding-left: 15px;
               text-align: left;
@@ -120,9 +124,11 @@
 
           .timeline-item {
             margin-bottom: 40px;
+
             &:last-child {
               margin-bottom: 0;
             }
+
             &:nth-child(even) {
               padding-right: 10px;
               text-align: left;
@@ -226,6 +232,7 @@
       }
     }
   }
+
   .home-section .auto-grid .home-image {
     max-width: 70vw;
   }
@@ -234,10 +241,12 @@
     width: 75vw;
     height: 75vw;
   }
+
   .about-section .experience .timeline .timeline-item .timeline-item-inner,
   .about-section .education .timeline .timeline-item .timeline-item-inner {
     padding: 14px;
   }
+
   .home-section .auto-grid .home-image .image-box,
   .about-section .about-image .image-box {
     width: auto;
@@ -250,10 +259,6 @@
 
   .about-section .container .about-text .tab-content .timeline .timeline-item {
     padding: 10px 0 0 20px;
-  }
-
-  .custom-btn {
-    letter-spacing: initial;
   }
 
   .portfolio-section .portfolio-items {
@@ -279,7 +284,8 @@
 }
 
 @media screen and (max-width: 440px) {
-  .home-section .auto-grid .home-text h1 {
+  .home-section .auto-grid .home-text h1,
+  header .nav .nav-inner ul li .nav-link {
     font-size: 2em;
   }
 
@@ -292,10 +298,6 @@
 
   .auto-grid {
     padding: 5px;
-  }
-
-  header .nav .nav-inner ul li .nav-link {
-    font-size: 1.5em;
   }
 
   .about-section .about-text p {

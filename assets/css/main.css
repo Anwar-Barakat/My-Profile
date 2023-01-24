@@ -2676,9 +2676,6 @@ header .nav .nav-inner ul li .nav-link::before {
   .about-section .container .about-text .tab-content .timeline .timeline-item {
     padding: 10px 0 0 20px;
   }
-  .custom-btn {
-    letter-spacing: initial;
-  }
   .portfolio-section .portfolio-items {
     -ms-grid-columns: (minmax(350px, 1fr)) [auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -2709,7 +2706,8 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 @media screen and (max-width: 440px) {
-  .home-section .auto-grid .home-text h1 {
+  .home-section .auto-grid .home-text h1,
+  header .nav .nav-inner ul li .nav-link {
     font-size: 2em;
   }
   .custom-grid,
@@ -2723,9 +2721,6 @@ header .nav .nav-inner ul li .nav-link::before {
   }
   .auto-grid {
     padding: 5px;
-  }
-  header .nav .nav-inner ul li .nav-link {
-    font-size: 1.5em;
   }
   .about-section .about-text p {
     max-width: 288px;
