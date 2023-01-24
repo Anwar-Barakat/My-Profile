@@ -25,20 +25,16 @@ section {
   border-radius: 10px;
   padding: 50px 0 0px;
   box-shadow: var(--box-shadow-alt);
-  perspective: 1000px;
-  transform-style: preserve-3d;
   backdrop-filter: var(--backdrop-filter-blur);
 }
 
 section.section {
   display: none;
-
   &.active {
     display: block;
     animation: fadeIn 1s ease forwards;
     position: relative;
   }
-
   &.fade-out {
     animation: fadeOut 1s ease forwards;
   }

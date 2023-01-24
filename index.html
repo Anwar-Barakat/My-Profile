@@ -28,37 +28,14 @@
       type="image/x-icon"
     />
 
+    <!-- navigation css -->
+    <link href="assets/css/navigation.min.css" rel="stylesheet" />
+
     <!-- custom css -->
     <link href="assets/css/style.min.css" rel="stylesheet" />
 
-    <style>
-      @font-face {
-        font-family: "fontello";
-        src: url("./font/fontello.eot?75189420");
-        src: url("./font/fontello.eot?75189420#iefix")
-            format("embedded-opentype"),
-          url("./font/fontello.woff?75189420") format("woff"),
-          url("./font/fontello.ttf?75189420") format("truetype"),
-          url("./font/fontello.svg?75189420#fontello") format("svg");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      .demo-icon {
-        font-family: "fontello";
-        font-style: normal;
-        font-weight: normal;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        margin-right: 0.2em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        margin-left: 0.2em;
-      }
-    </style>
+    <!-- responsive css -->
+    <link href="assets/css/responsive.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -117,7 +94,9 @@
         <div class="modes">
           <h4 class="mode-text">dark mode</h4>
           <div class="change-mode">
-            <i class="uil uil-moon change__theme" id="theme-btn"></i>
+            <i class="demo-icon icon-moon change__theme" id="theme-btn"
+              >&#xf186;</i
+            >
           </div>
         </div>
         <a
@@ -284,7 +263,7 @@
           <div class="row custom-grid" style="width: 100%">
             <div class="about-image">
               <div class="image-box">
-                <div class="content skeleton border-radius-50">
+                <div class="content skeleton">
                   <img
                     loading="eager"
                     src="assets/images/about/about.webp"
@@ -1499,20 +1478,7 @@
     </div>
     <!-- portfolio popup end -->
 
-    <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-
-    <!-- custom jquery js  -->
-    <script src="assets/js/jquery-main.min.js"></script>
-
-    <!-- dark-light mode -->
-    <script src="assets/js/dark-light-mode.min.js"></script>
-
-    <!-- smtp cdn -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="assets/js/send-mail.min.js"></script>
-
     <!-- custom js -->
-    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/main.min.js" async></script>
   </body>
 </html>

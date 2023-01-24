@@ -3,15 +3,9 @@
   width: 100%;
 }
 
-video {
-  max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: var(--main-shadow);
-}
-
 .skeleton {
   position: relative;
-
+  border-radius: 10px;
   &::before {
     content: "";
     position: absolute;
@@ -24,7 +18,6 @@ video {
     background-size: 200%;
     animation: skeleton 1s infinite reverse;
   }
-
   @keyframes skeleton {
     0% {
       background-position: -100% 0;
@@ -44,18 +37,6 @@ video {
   flex-wrap: wrap;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.d-grid {
-  display: grid;
-}
-
-.gap-half {
-  gap: 0.5rem;
-}
-
 .gap-1 {
   gap: 1rem;
 }
@@ -65,13 +46,6 @@ video {
 }
 
 .space-between {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-between {
-  display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -90,22 +64,6 @@ video {
 //?_______________________
 //? Hide Element & Borders
 //?_______________________
-
-.d-none {
-  display: none;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.border-radius-50 {
-  border-radius: 50%;
-}
-
-.border-radius-10 {
-  border-radius: 10px;
-}
 
 //?_______________________
 //? Buttons
@@ -169,8 +127,8 @@ video {
 }
 
 .github-btn {
-  background: var(--git-background);
-  color: var(--git-color);
+  background: var(--text-color);
+  color: var(--body-color);
 
   &:hover {
     color: var(--body-color);

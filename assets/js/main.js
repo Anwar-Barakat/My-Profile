@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     document.querySelector(".loader").classList.add("fade-out");
     window.scrollTo(0, 0);
-  }, 1500);
+  }, 1000);
 });
 // ! _______________________
 // ! Toggle Navbar
@@ -184,3 +184,62 @@ window.addEventListener("load", () => {
     item.classList.remove("skeleton");
   });
 });
+
+// ! ===========================
+// ! Filtering Works
+// ! ===========================
+let filters = document.querySelector(".filters");
+let projects = document.querySelectorAll(".portfolio-item");
+
+filters.addEventListener("click", (event) => {
+  if (event.target.classList.contains("filter-item")) {
+    // deactivate existing active ‘filter-item’
+    filters.querySelector(".active").classList.remove("active");
+    // activate new ‘filter-item’
+    event.target.classList.add("active");
+    const filterValue = event.target.getAttribute("data-filter");
+
+    projects.forEach((item) => {
+      if (item.classList.contains(filterValue) || filterValue === "all") {
+        item.classList.remove("hide");
+        item.classList.add("show");
+      } else {
+        item.classList.remove("show");
+        item.classList.add("hide");
+      }
+    });
+  }
+});
+
+//? =========================== Dark/Light Mode  =========================
+const themeButton = document.getElementById("theme-btn"),
+  darkTheme = "dark-theme",
+  selectedTheme = localStorage.getItem("selected-theme"),
+  darkText = document.querySelector(".mode-text"),
+  selectedIcon = localStorage.getItem("selected-icon");
+
+const logo = document.querySelector(".logo img");
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+
+document.body.classList.contains("dark-theme")
+  ? logo.classList.add("dark")
+  : logo.classList.remove("dark");
+
+document.body.classList.contains("dark-theme")
+  ? (darkText.innerHTML = "Dark Mode")
+  : (darkText.innerHTML = "Light Mode");
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  document.body.classList.contains("dark-theme")
+    ? logo.classList.add("dark")
+    : logo.classList.remove("dark");
+
+  document.body.classList.contains("dark-theme")
+    ? (darkText.innerHTML = "Dark Mode")
+    : (darkText.innerHTML = "Light Mode");
+});
+//? =========================== Dark/Light Mode  =========================
