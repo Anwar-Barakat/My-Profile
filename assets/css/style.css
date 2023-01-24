@@ -501,6 +501,10 @@ video {
   color: var(--body-color);
 }
 
+.github-btn .demo-icon {
+  color: #fff;
+}
+
 .header-image,
 .home-section .auto-grid .home-image {
   border-radius: 50%;
@@ -2756,4 +2760,4 @@ header .nav .nav-inner ul li .nav-link::before {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */
