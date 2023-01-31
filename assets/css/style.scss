@@ -44,10 +44,13 @@
 //? _______________________
 //? Global Settings
 //? _______________________
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: none !important;
 }
 
 html {
@@ -186,6 +189,28 @@ textarea {
   text-transform: none;
   line-height: 1em;
   margin-left: 0.2em;
+}
+
+.cursor,
+.cursor2 {
+  position: fixed;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.cursor {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--first-color-lighter);
+  transition: 0.1s;
+}
+.cursor2 {
+  width: 8px;
+  height: 8px;
+  background-color: var(--first-color);
+  transition: 0.15s;
 }
 
 //? _______________________

@@ -225,3 +225,11 @@ themeButton.addEventListener("click", () => {
     : (darkText.innerHTML = "Light Mode");
 });
 //? =========================== Dark/Light Mode  =========================
+
+// Curson Animation on MouseMove
+let cursor = document.querySelector(".cursor"),
+  cursor2 = document.querySelector(".cursor2");
+document.addEventListener("mousemove", (e) => {
+  cursor.style.cssText = cursor2.style.cssText =
+    "left: " + e.clientX + "px; top:" + e.clientY + "px;";
+});
