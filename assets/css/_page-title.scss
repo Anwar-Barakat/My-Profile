@@ -45,7 +45,8 @@
         0 0 20px var(--first-color-second), 0 0 40px var(--first-color-second),
         0 0 80px var(--first-color-second), 0 0 120px var(--first-color-second);
       z-index: 2;
-      animation: animatelightbar 4s linear infinite;
+      animation: animatelightbar 3s linear;
+      transform: scaley(0) translateX(0);
     }
 
     @keyframes animatelightbar {
@@ -72,16 +73,15 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
       background: var(--input-color);
       overflow: hidden;
-      animation: animateToplayer 8s linear infinite;
+      animation: animateToplayer 6s linear;
+      transform: translateX(-100%);
     }
 
     @keyframes animateToplayer {
-      0%,
-      2.5% {
+      0% {
+        height: 100%;
         transform: translateX(0);
       }
 
@@ -98,22 +98,8 @@
         transform: translateX(100%);
       }
 
-      50.001%,
-      52.5% {
-        transform: translateX(-100%);
-      }
-
-      55% {
-        transform: translateX(-100%);
-      }
-
-      95% {
-        transform: translateX(0%);
-      }
-
-      97.5%,
       100% {
-        transform: translateX(0%);
+        transform: translateX(200%);
       }
     }
   }
