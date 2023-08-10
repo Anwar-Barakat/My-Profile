@@ -1401,13 +1401,12 @@ header .nav .nav-inner ul li .nav-link::before {
 }
 
 .about-section .container .about-text .skills .group .skill-item {
-  padding: 2px 10px;
+  padding: 7px 11px;
   color: var(--text-color-light);
   font-size: 1em;
   text-transform: capitalize;
   letter-spacing: 2px;
   background-color: var(--white-alpha-40);
-  border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1423,6 +1422,7 @@ header .nav .nav-inner ul li .nav-link::before {
   display: flex;
   gap: 0.5em;
   margin-bottom: 2em;
+  margin-top: 2rem;
 }
 
 .about-section .container .about-tabs {
@@ -1615,6 +1615,11 @@ header .nav .nav-inner ul li .nav-link::before {
   font-style: italic;
   color: var(--text-color);
   font-weight: 600;
+}
+
+.about-section .container .experience .timeline .timeline-item .timeline-item-inner h4 a,
+.about-section .container .education .timeline .timeline-item .timeline-item-inner h4 a {
+  color: var(--first-color);
 }
 
 .about-section .container .experience .timeline .timeline-item .timeline-item-inner p,
