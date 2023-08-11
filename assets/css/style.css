@@ -396,7 +396,7 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   display: inline-block;
   margin-right: 0.5rem;
   letter-spacing: 1px;
-  padding: 5px 10px;
+  padding: 10px;
   color: var(--first-color);
   font-size: 1em;
   text-transform: capitalize;
@@ -458,8 +458,12 @@ section.home-section.active, header .nav .home-section.active.nav-inner {
   width: 100%;
 }
 
+li.custom-btn {
+  padding: 5px 10px;
+}
+
 .custom-btn-padding {
-  padding: 7px 15px;
+  padding: 10px 15px;
 }
 
 .github-btn {
